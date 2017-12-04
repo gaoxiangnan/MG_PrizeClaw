@@ -1,0 +1,23 @@
+//
+//  MG_PrizeClaw-Prefix.pch
+//  MG_PrizeClaw
+//
+//  Created by 高向楠 on 2017/12/4.
+//  Copyright © 2017年 高向楠. All rights reserved.
+//
+
+#ifndef MG_PrizeClaw_Prefix_pch
+#define MG_PrizeClaw_Prefix_pch
+#import "JSONKit.h"
+//#import "MBProgressHUD.h"
+//#import "MJRefresh.h"
+#import <AFNetworking.h>
+#import <Masonry.h>
+#import <MapKit/MapKit.h>
+#import "UIView+SDAutoLayout.h"
+//#import "CH_NetWorkManager.h"
+#import <SDWebImageManager.h>
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* MG_PrizeClaw_Prefix_pch */
