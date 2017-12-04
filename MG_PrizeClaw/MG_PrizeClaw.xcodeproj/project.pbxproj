@@ -126,6 +126,7 @@
 		FE617BA01FD53B2300D9FC86 /* MG_PrizeClaw */ = {
 			isa = PBXGroup;
 			children = (
+				FE617BD41FD53F6900D9FC86 /* OpenSource */,
 				FE617BA11FD53B2300D9FC86 /* AppDelegate.h */,
 				FE617BA21FD53B2300D9FC86 /* AppDelegate.m */,
 				FE617BA41FD53B2300D9FC86 /* ViewController.h */,
@@ -156,6 +157,13 @@
 				FE617BC71FD53B2300D9FC86 /* Info.plist */,
 			);
 			path = MG_PrizeClawUITests;
+			sourceTree = "<group>";
+		};
+		FE617BD41FD53F6900D9FC86 /* OpenSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OpenSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
