@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7A1F6FF1FD6715A0076F7A3 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A1F6FE1FD6715A0076F7A3 /* HomeViewController.m */; };
 		C81D591E6BCBF6C47CC03030 /* libPods-MG_PrizeClaw.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1D777541CC6BF865A12444 /* libPods-MG_PrizeClaw.a */; };
 		FE617BA31FD53B2300D9FC86 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE617BA21FD53B2300D9FC86 /* AppDelegate.m */; };
 		FE617BA61FD53B2300D9FC86 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE617BA51FD53B2300D9FC86 /* ViewController.m */; };
@@ -38,6 +39,8 @@
 /* Begin PBXFileReference section */
 		63745F092C230B9B62F3F0BD /* Pods-MG_PrizeClaw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MG_PrizeClaw.release.xcconfig"; path = "Pods/Target Support Files/Pods-MG_PrizeClaw/Pods-MG_PrizeClaw.release.xcconfig"; sourceTree = "<group>"; };
 		9F1D777541CC6BF865A12444 /* libPods-MG_PrizeClaw.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MG_PrizeClaw.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7A1F6FD1FD6715A0076F7A3 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		A7A1F6FE1FD6715A0076F7A3 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		C06275ED6F8D3D9E775CA0BE /* Pods-MG_PrizeClaw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MG_PrizeClaw.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MG_PrizeClaw/Pods-MG_PrizeClaw.debug.xcconfig"; sourceTree = "<group>"; };
 		FE617B9E1FD53B2300D9FC86 /* MG_PrizeClaw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MG_PrizeClaw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE617BA11FD53B2300D9FC86 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -93,6 +96,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A7A1F7001FD671630076F7A3 /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				A7A1F6FD1FD6715A0076F7A3 /* HomeViewController.h */,
+				A7A1F6FE1FD6715A0076F7A3 /* HomeViewController.m */,
+			);
+			path = "首页";
+			sourceTree = "<group>";
+		};
 		EAD99A27760DB6C2D5F0ADB8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +142,7 @@
 				FE617BA21FD53B2300D9FC86 /* AppDelegate.m */,
 				FE617BA41FD53B2300D9FC86 /* ViewController.h */,
 				FE617BA51FD53B2300D9FC86 /* ViewController.m */,
+				A7A1F7001FD671630076F7A3 /* 首页 */,
 				FE617BA71FD53B2300D9FC86 /* Main.storyboard */,
 				FE617BAA1FD53B2300D9FC86 /* Assets.xcassets */,
 				FE617BAC1FD53B2300D9FC86 /* LaunchScreen.storyboard */,
@@ -353,6 +366,7 @@
 				FE617BA61FD53B2300D9FC86 /* ViewController.m in Sources */,
 				FE617BB11FD53B2300D9FC86 /* main.m in Sources */,
 				FE617BA31FD53B2300D9FC86 /* AppDelegate.m in Sources */,
+				A7A1F6FF1FD6715A0076F7A3 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +531,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EL7N728QN5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MG_PrizeClaw/MG_PrizeClaw-Prefix.pch";
 				INFOPLIST_FILE = MG_PrizeClaw/Info.plist;
@@ -533,6 +548,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EL7N728QN5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MG_PrizeClaw/MG_PrizeClaw-Prefix.pch";
 				INFOPLIST_FILE = MG_PrizeClaw/Info.plist;
