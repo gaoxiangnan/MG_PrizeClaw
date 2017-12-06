@@ -529,16 +529,16 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C06275ED6F8D3D9E775CA0BE /* Pods-MG_PrizeClaw.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EL7N728QN5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MG_PrizeClaw/MG_PrizeClaw-Prefix.pch";
 				INFOPLIST_FILE = MG_PrizeClaw/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ViewLayer.MG-PrizeClaw";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -546,16 +546,16 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63745F092C230B9B62F3F0BD /* Pods-MG_PrizeClaw.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EL7N728QN5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MG_PrizeClaw/MG_PrizeClaw-Prefix.pch";
 				INFOPLIST_FILE = MG_PrizeClaw/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ViewLayer.MG-PrizeClaw";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
