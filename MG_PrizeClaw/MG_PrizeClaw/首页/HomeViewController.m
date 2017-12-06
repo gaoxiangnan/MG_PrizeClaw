@@ -7,20 +7,101 @@
 //
 
 #import "HomeViewController.h"
+#import "HomeCollectionViewCell.h"
+#import "HomeCollectHeaderView.h"
 
-@interface HomeViewController ()
+#define CollectViewCellW (kWindowW - 40)/2
+#define CollectViewCellH             190
+#define CollHeaderViewW  (kWindowW - 40)
+#define CollHeaderViewH  175
 
+@interface HomeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
+@property (nonatomic, strong) UICollectionView *collectionView;
 @end
-
+static NSString * const reuseIdentifier = @"cell";
 @implementation HomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-    self.view.backgroundColor = [UIColor redColor];
+    UIImageView *bgImV = [[UIImageView alloc]initWithFrame:self.view.bounds];
+    bgImV.image = [UIImage imageNamed:@"mg_backG"];
+    [self.view addSubview:bgImV];
+    [self.view addSubview:self.collectionView];
+}
+- (UICollectionView *)collectionView
+{
+    if (!_collectionView) {
+        UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
+        
+        flowLayout.itemSize = CGSizeMake(CollectViewCellW, CollectViewCellH);
+        flowLayout.headerReferenceSize =CGSizeMake(CollHeaderViewW,CollHeaderViewH);//头视图大小
+        [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+        flowLayout.minimumLineSpacing = 10;
+        flowLayout.minimumInteritemSpacing = 10;
+        
+        _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(10, 0, kWindowW - 20, kWindowH) collectionViewLayout:flowLayout];
+        
+        _collectionView.backgroundColor = [UIColor clearColor];
+        _collectionView.delegate = self;
+        _collectionView.dataSource = self;
+        _collectionView.showsVerticalScrollIndicator = NO;
+//        _collectionView.
+        
+        [_collectionView registerClass:[HomeCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+        [_collectionView registerClass:[HomeCollectHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
+        
+    }
+    return _collectionView;
+}
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
+    UICollectionReusableView *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"forIndexPath:indexPath];
+    if (indexPath.section ==0) {
+        UILabel *labelOne = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, kWindowW, 50)];
+        labelOne.text =@"热门检查";
+        labelOne.font = [UIFont systemFontOfSize:14.0f];
+        labelOne.textColor =[UIColor purpleColor];
+        [header addSubview:labelOne];
+    }
+    return header;
+}
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
+    return CGSizeMake(CollHeaderViewW, CollHeaderViewH);
 }
 
+
+-(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    HomeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    
+    return cell;
+}
+
+
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+}
+
+- (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 10;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+
+- (CGSize)sizeForChildContentContainer:(nonnull id<UIContentContainer>)container withParentContainerSize:(CGSize)parentSize
+{
+    return CGSizeMake(CollectViewCellW, CollectViewCellH);
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
+    
+    return UIEdgeInsetsMake(5, 0, 5, 0);
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

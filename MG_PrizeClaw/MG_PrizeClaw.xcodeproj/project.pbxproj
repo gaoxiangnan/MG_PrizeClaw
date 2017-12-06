@@ -17,6 +17,8 @@
 		FE617BB11FD53B2300D9FC86 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE617BB01FD53B2300D9FC86 /* main.m */; };
 		FE617BBB1FD53B2300D9FC86 /* MG_PrizeClawTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE617BBA1FD53B2300D9FC86 /* MG_PrizeClawTests.m */; };
 		FE617BC61FD53B2300D9FC86 /* MG_PrizeClawUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE617BC51FD53B2300D9FC86 /* MG_PrizeClawUITests.m */; };
+		FEFCCC0D1FD7C134004F26A5 /* HomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCC0C1FD7C134004F26A5 /* HomeCollectionViewCell.m */; };
+		FEFCCC111FD7CEA1004F26A5 /* HomeCollectHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCC101FD7CEA1004F26A5 /* HomeCollectHeaderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,11 @@
 		FE617BC51FD53B2300D9FC86 /* MG_PrizeClawUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MG_PrizeClawUITests.m; sourceTree = "<group>"; };
 		FE617BC71FD53B2300D9FC86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE617BD31FD53BFD00D9FC86 /* MG_PrizeClaw-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MG_PrizeClaw-Prefix.pch"; sourceTree = "<group>"; };
+		FEFCCC0B1FD7C134004F26A5 /* HomeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeCollectionViewCell.h; sourceTree = "<group>"; };
+		FEFCCC0C1FD7C134004F26A5 /* HomeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionViewCell.m; sourceTree = "<group>"; };
+		FEFCCC0E1FD7C445004F26A5 /* MG_PrizeClawCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MG_PrizeClawCommon.h; sourceTree = "<group>"; };
+		FEFCCC0F1FD7CEA1004F26A5 /* HomeCollectHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeCollectHeaderView.h; sourceTree = "<group>"; };
+		FEFCCC101FD7CEA1004F26A5 /* HomeCollectHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeCollectHeaderView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +108,10 @@
 			children = (
 				A7A1F6FD1FD6715A0076F7A3 /* HomeViewController.h */,
 				A7A1F6FE1FD6715A0076F7A3 /* HomeViewController.m */,
+				FEFCCC0B1FD7C134004F26A5 /* HomeCollectionViewCell.h */,
+				FEFCCC0C1FD7C134004F26A5 /* HomeCollectionViewCell.m */,
+				FEFCCC0F1FD7CEA1004F26A5 /* HomeCollectHeaderView.h */,
+				FEFCCC101FD7CEA1004F26A5 /* HomeCollectHeaderView.m */,
 			);
 			path = "首页";
 			sourceTree = "<group>";
@@ -138,6 +149,7 @@
 		FE617BA01FD53B2300D9FC86 /* MG_PrizeClaw */ = {
 			isa = PBXGroup;
 			children = (
+				FEFCCC071FD7BB60004F26A5 /* OpenSource */,
 				FE617BA11FD53B2300D9FC86 /* AppDelegate.h */,
 				FE617BA21FD53B2300D9FC86 /* AppDelegate.m */,
 				FE617BA41FD53B2300D9FC86 /* ViewController.h */,
@@ -149,6 +161,7 @@
 				FE617BAF1FD53B2300D9FC86 /* Info.plist */,
 				FE617BB01FD53B2300D9FC86 /* main.m */,
 				FE617BD31FD53BFD00D9FC86 /* MG_PrizeClaw-Prefix.pch */,
+				FEFCCC0E1FD7C445004F26A5 /* MG_PrizeClawCommon.h */,
 			);
 			path = MG_PrizeClaw;
 			sourceTree = "<group>";
@@ -169,6 +182,13 @@
 				FE617BC71FD53B2300D9FC86 /* Info.plist */,
 			);
 			path = MG_PrizeClawUITests;
+			sourceTree = "<group>";
+		};
+		FEFCCC071FD7BB60004F26A5 /* OpenSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OpenSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,9 +384,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE617BA61FD53B2300D9FC86 /* ViewController.m in Sources */,
+				FEFCCC111FD7CEA1004F26A5 /* HomeCollectHeaderView.m in Sources */,
 				FE617BB11FD53B2300D9FC86 /* main.m in Sources */,
 				FE617BA31FD53B2300D9FC86 /* AppDelegate.m in Sources */,
 				A7A1F6FF1FD6715A0076F7A3 /* HomeViewController.m in Sources */,
+				FEFCCC0D1FD7C134004F26A5 /* HomeCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,6 +553,11 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EL7N728QN5;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MG_PrizeClaw/OpenSource/iphoneos_simulator",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MG_PrizeClaw/MG_PrizeClaw-Prefix.pch";
 				INFOPLIST_FILE = MG_PrizeClaw/Info.plist;
@@ -548,6 +575,11 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EL7N728QN5;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MG_PrizeClaw/OpenSource/iphoneos_simulator",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MG_PrizeClaw/MG_PrizeClaw-Prefix.pch";
 				INFOPLIST_FILE = MG_PrizeClaw/Info.plist;

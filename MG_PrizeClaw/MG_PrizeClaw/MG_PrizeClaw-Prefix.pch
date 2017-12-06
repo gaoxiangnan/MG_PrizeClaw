@@ -8,6 +8,7 @@
 
 #ifndef MG_PrizeClaw_Prefix_pch
 #define MG_PrizeClaw_Prefix_pch
+#import "MG_PrizeClawCommon.h"
 //#import "JSONKit.h"
 //#import "MBProgressHUD.h"
 //#import "MJRefresh.h"

@@ -12,6 +12,7 @@
 @interface ViewController ()
 @property(nonatomic,strong)UIImageView *BackImg,*ClawImg,*HDImg;
 @property(nonatomic,strong)UIButton  *WXbtn;
+
 @end
 
 @implementation ViewController
@@ -22,7 +23,7 @@
 -(UIImageView *)BackImg
 {
     if (!_BackImg) {
-        _BackImg  = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"背景"]];
+        _BackImg  = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"mg_backG"]];
         _BackImg.frame = self.view.frame;
     }
     return _BackImg;
@@ -32,7 +33,7 @@
 -(UIImageView *)ClawImg
 {
     if (!_ClawImg) {
-        _ClawImg = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"图层 8"]];
+        _ClawImg = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"mg_claw"]];
     }
     return _ClawImg;
 }
@@ -40,7 +41,7 @@
 -(UIImageView *)HDImg
 {
     if (!_HDImg) {
-        _HDImg = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"组 4"]];
+        _HDImg = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"mg_wawa"]];
     }
     return _HDImg;
 }
