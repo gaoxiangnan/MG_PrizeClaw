@@ -19,6 +19,13 @@
 		FE617BC61FD53B2300D9FC86 /* MG_PrizeClawUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE617BC51FD53B2300D9FC86 /* MG_PrizeClawUITests.m */; };
 		FEFCCC0D1FD7C134004F26A5 /* HomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCC0C1FD7C134004F26A5 /* HomeCollectionViewCell.m */; };
 		FEFCCC111FD7CEA1004F26A5 /* HomeCollectHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCC101FD7CEA1004F26A5 /* HomeCollectHeaderView.m */; };
+		FEFCCC391FD7ED8D004F26A5 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCC2C1FD7ED8D004F26A5 /* TAAbstractDotView.m */; };
+		FEFCCC3A1FD7ED8D004F26A5 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCC2E1FD7ED8D004F26A5 /* TAAnimatedDotView.m */; };
+		FEFCCC3B1FD7ED8D004F26A5 /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCC301FD7ED8D004F26A5 /* TADotView.m */; };
+		FEFCCC3C1FD7ED8D004F26A5 /* TAPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCC321FD7ED8D004F26A5 /* TAPageControl.m */; };
+		FEFCCC3D1FD7ED8D004F26A5 /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCC341FD7ED8D004F26A5 /* SDCollectionViewCell.m */; };
+		FEFCCC3E1FD7ED8D004F26A5 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCC361FD7ED8D004F26A5 /* SDCycleScrollView.m */; };
+		FEFCCC3F1FD7ED8D004F26A5 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCC381FD7ED8D004F26A5 /* UIView+SDExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +73,20 @@
 		FEFCCC0E1FD7C445004F26A5 /* MG_PrizeClawCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MG_PrizeClawCommon.h; sourceTree = "<group>"; };
 		FEFCCC0F1FD7CEA1004F26A5 /* HomeCollectHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeCollectHeaderView.h; sourceTree = "<group>"; };
 		FEFCCC101FD7CEA1004F26A5 /* HomeCollectHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeCollectHeaderView.m; sourceTree = "<group>"; };
+		FEFCCC2B1FD7ED8D004F26A5 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
+		FEFCCC2C1FD7ED8D004F26A5 /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
+		FEFCCC2D1FD7ED8D004F26A5 /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
+		FEFCCC2E1FD7ED8D004F26A5 /* TAAnimatedDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAnimatedDotView.m; sourceTree = "<group>"; };
+		FEFCCC2F1FD7ED8D004F26A5 /* TADotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TADotView.h; sourceTree = "<group>"; };
+		FEFCCC301FD7ED8D004F26A5 /* TADotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TADotView.m; sourceTree = "<group>"; };
+		FEFCCC311FD7ED8D004F26A5 /* TAPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPageControl.h; sourceTree = "<group>"; };
+		FEFCCC321FD7ED8D004F26A5 /* TAPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPageControl.m; sourceTree = "<group>"; };
+		FEFCCC331FD7ED8D004F26A5 /* SDCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCollectionViewCell.h; sourceTree = "<group>"; };
+		FEFCCC341FD7ED8D004F26A5 /* SDCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCollectionViewCell.m; sourceTree = "<group>"; };
+		FEFCCC351FD7ED8D004F26A5 /* SDCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCycleScrollView.h; sourceTree = "<group>"; };
+		FEFCCC361FD7ED8D004F26A5 /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
+		FEFCCC371FD7ED8D004F26A5 /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
+		FEFCCC381FD7ED8D004F26A5 /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,8 +208,46 @@
 		FEFCCC071FD7BB60004F26A5 /* OpenSource */ = {
 			isa = PBXGroup;
 			children = (
+				FEFCCC131FD7E2E2004F26A5 /* BannerView */,
 			);
 			path = OpenSource;
+			sourceTree = "<group>";
+		};
+		FEFCCC131FD7E2E2004F26A5 /* BannerView */ = {
+			isa = PBXGroup;
+			children = (
+				FEFCCC291FD7ED8D004F26A5 /* SDCycleScrollView */,
+			);
+			path = BannerView;
+			sourceTree = "<group>";
+		};
+		FEFCCC291FD7ED8D004F26A5 /* SDCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				FEFCCC2A1FD7ED8D004F26A5 /* PageControl */,
+				FEFCCC331FD7ED8D004F26A5 /* SDCollectionViewCell.h */,
+				FEFCCC341FD7ED8D004F26A5 /* SDCollectionViewCell.m */,
+				FEFCCC351FD7ED8D004F26A5 /* SDCycleScrollView.h */,
+				FEFCCC361FD7ED8D004F26A5 /* SDCycleScrollView.m */,
+				FEFCCC371FD7ED8D004F26A5 /* UIView+SDExtension.h */,
+				FEFCCC381FD7ED8D004F26A5 /* UIView+SDExtension.m */,
+			);
+			path = SDCycleScrollView;
+			sourceTree = "<group>";
+		};
+		FEFCCC2A1FD7ED8D004F26A5 /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				FEFCCC2B1FD7ED8D004F26A5 /* TAAbstractDotView.h */,
+				FEFCCC2C1FD7ED8D004F26A5 /* TAAbstractDotView.m */,
+				FEFCCC2D1FD7ED8D004F26A5 /* TAAnimatedDotView.h */,
+				FEFCCC2E1FD7ED8D004F26A5 /* TAAnimatedDotView.m */,
+				FEFCCC2F1FD7ED8D004F26A5 /* TADotView.h */,
+				FEFCCC301FD7ED8D004F26A5 /* TADotView.m */,
+				FEFCCC311FD7ED8D004F26A5 /* TAPageControl.h */,
+				FEFCCC321FD7ED8D004F26A5 /* TAPageControl.m */,
+			);
+			path = PageControl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,10 +442,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEFCCC3D1FD7ED8D004F26A5 /* SDCollectionViewCell.m in Sources */,
+				FEFCCC3A1FD7ED8D004F26A5 /* TAAnimatedDotView.m in Sources */,
+				FEFCCC3B1FD7ED8D004F26A5 /* TADotView.m in Sources */,
 				FE617BA61FD53B2300D9FC86 /* ViewController.m in Sources */,
 				FEFCCC111FD7CEA1004F26A5 /* HomeCollectHeaderView.m in Sources */,
 				FE617BB11FD53B2300D9FC86 /* main.m in Sources */,
+				FEFCCC391FD7ED8D004F26A5 /* TAAbstractDotView.m in Sources */,
+				FEFCCC3F1FD7ED8D004F26A5 /* UIView+SDExtension.m in Sources */,
+				FEFCCC3E1FD7ED8D004F26A5 /* SDCycleScrollView.m in Sources */,
 				FE617BA31FD53B2300D9FC86 /* AppDelegate.m in Sources */,
+				FEFCCC3C1FD7ED8D004F26A5 /* TAPageControl.m in Sources */,
 				A7A1F6FF1FD6715A0076F7A3 /* HomeViewController.m in Sources */,
 				FEFCCC0D1FD7C134004F26A5 /* HomeCollectionViewCell.m in Sources */,
 			);
@@ -561,7 +627,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MG_PrizeClaw/MG_PrizeClaw-Prefix.pch";
 				INFOPLIST_FILE = MG_PrizeClaw/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ViewLayer.MG-PrizeClaw";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -583,7 +649,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MG_PrizeClaw/MG_PrizeClaw-Prefix.pch";
 				INFOPLIST_FILE = MG_PrizeClaw/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ViewLayer.MG-PrizeClaw";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -11,7 +11,7 @@
 #import "HomeCollectHeaderView.h"
 
 #define CollectViewCellW (kWindowW - 40)/2
-#define CollectViewCellH             190
+#define CollectViewCellH             195
 #define CollHeaderViewW  (kWindowW - 40)
 #define CollHeaderViewH  175
 
@@ -39,7 +39,7 @@ static NSString * const reuseIdentifier = @"cell";
         flowLayout.minimumLineSpacing = 10;
         flowLayout.minimumInteritemSpacing = 10;
         
-        _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(10, 0, kWindowW - 20, kWindowH) collectionViewLayout:flowLayout];
+        _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, kWindowW, kWindowH) collectionViewLayout:flowLayout];
         
         _collectionView.backgroundColor = [UIColor clearColor];
         _collectionView.delegate = self;
@@ -55,13 +55,6 @@ static NSString * const reuseIdentifier = @"cell";
 }
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
     UICollectionReusableView *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"forIndexPath:indexPath];
-    if (indexPath.section ==0) {
-        UILabel *labelOne = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, kWindowW, 50)];
-        labelOne.text =@"热门检查";
-        labelOne.font = [UIFont systemFontOfSize:14.0f];
-        labelOne.textColor =[UIColor purpleColor];
-        [header addSubview:labelOne];
-    }
     return header;
 }
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
@@ -100,7 +93,7 @@ static NSString * const reuseIdentifier = @"cell";
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
     
-    return UIEdgeInsetsMake(5, 0, 5, 0);
+    return UIEdgeInsetsMake(10, 0, 5, 0);
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
