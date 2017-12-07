@@ -13,11 +13,12 @@
 
 @property(nonatomic,strong)UIButton  *LeftBtn,*RightBtn;
 @property(nonatomic,strong)UIImageView *NavImg;
+@property(nonatomic,strong)UILabel *titleLb;
 
 @end
 
 @implementation NavView
--(instancetype)initWithFrame:(CGRect)frame leftButtonImg:(UIImage *)btnImg btnClick:(void(^)(void))leftBtnBlock rightButton:(UIImage *)rightImg rightClick:(void(^)(void))rightBtnClick
+-(instancetype)initWithFrame:(CGRect)frame titleImage:(UIImage *)titleImg titleString:(NSString *)titleString leftButtonImg:(UIImage *)btnImg btnClick:(void(^)(void))leftBtnBlock rightButton:(UIImage *)rightImg rightClick:(void(^)(void))rightBtnClick
 {
     self = [super initWithFrame:frame];
     if (self) {
@@ -29,6 +30,20 @@
         [self addSubview:self.LeftBtn];
         [self addSubview:self.RightBtn];
         [self addSubview:self.NavImg];
+        [self addSubview:self.titleLb];
+        [_titleLb mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(self);
+            make.top.mas_equalTo(20);
+            make.right.mas_equalTo(self.mas_right);
+        }];
+        if (titleImg) {
+            _NavImg.image = titleImg;
+            _titleLb.hidden = YES;
+        }else{
+            _titleLb.text = titleString;
+            _NavImg.hidden = YES;
+        }
+        
         [self adap];
         
         [_LeftBtn setBackgroundImage:btnImg forState:UIControlStateNormal];
@@ -50,7 +65,15 @@
     }
     return _LeftBtn;
 }
-
+- (UILabel *)titleLb
+{
+    if (!_titleLb) {
+        _titleLb = [UILabel new];
+        _titleLb.textAlignment = NSTextAlignmentCenter;
+        _titleLb.font = [UIFont systemFontOfSize:16 weight:UIFontWeightBold];
+    }
+    return _titleLb;
+}
 -(UIButton *)RightBtn
 {
     if (!_RightBtn) {
@@ -64,7 +87,7 @@
 -(UIImageView *)NavImg
 {
     if (!_NavImg) {
-        _NavImg = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Nav"]];
+        _NavImg = [UIImageView new];
         _NavImg.frame = CGRectMake((kWindowW-100)/2, 20, 100, 44);
     }
     return _NavImg;

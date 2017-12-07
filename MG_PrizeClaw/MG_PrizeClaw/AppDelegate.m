@@ -20,7 +20,7 @@
     
     ViewController *vc = [[ViewController alloc]init];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
-    navigationController.navigationBarHidden = YES;
+    
     self.window.rootViewController = navigationController;
    
     

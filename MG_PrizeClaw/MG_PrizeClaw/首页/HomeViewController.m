@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import "HomeCollectionViewCell.h"
 #import "HomeCollectHeaderView.h"
+#import "NavView.h"
 
 #define CollectViewCellW (kWindowW - 40)/2
 #define CollectViewCellH             195
@@ -16,6 +17,12 @@
 #define CollHeaderViewH  175
 
 @interface HomeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
+{
+    float beginContentY;
+    float endContentY;
+    CGFloat sectionHeaderHeight;    //section的header高度
+    NavView *navView;
+}
 @property (nonatomic, strong) UICollectionView *collectionView;
 @end
 static NSString * const reuseIdentifier = @"cell";
@@ -23,9 +30,22 @@ static NSString * const reuseIdentifier = @"cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+//    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    
     UIImageView *bgImV = [[UIImageView alloc]initWithFrame:self.view.bounds];
     bgImV.image = [UIImage imageNamed:@"mg_backG"];
     [self.view addSubview:bgImV];
+    
+    navView = [[NavView alloc]initWithFrame:CGRectMake(0, 0, kWindowW, 64) titleImage:[UIImage imageNamed:@"Nav"] titleString:nil leftButtonImg:nil btnClick:^{
+        
+    } rightButton:nil rightClick:^{
+        
+    }];
+    
+    navView.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:navView];
+    
     [self.view addSubview:self.collectionView];
 }
 - (UICollectionView *)collectionView
@@ -39,7 +59,7 @@ static NSString * const reuseIdentifier = @"cell";
         flowLayout.minimumLineSpacing = 10;
         flowLayout.minimumInteritemSpacing = 10;
         
-        _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, kWindowW, kWindowH) collectionViewLayout:flowLayout];
+        _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 64, kWindowW, kWindowH-64) collectionViewLayout:flowLayout];
         
         _collectionView.backgroundColor = [UIColor clearColor];
         _collectionView.delegate = self;
@@ -95,6 +115,26 @@ static NSString * const reuseIdentifier = @"cell";
     
     return UIEdgeInsetsMake(10, 10, 5, 10);
 }
+
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    CGFloat offsetY = scrollView.contentOffset.y + _collectionView.contentInset.top;
+    if (offsetY > 64) {
+        [UIView animateWithDuration:1 animations:^{
+            navView.frame = CGRectMake(0, -64, kWindowW, 64);
+            _collectionView.frame = CGRectMake(0, 0, kWindowW, kWindowH);
+        }];
+        
+    }
+    if (offsetY < -60){
+        [UIView animateWithDuration:1 animations:^{
+            navView.frame = CGRectMake(0, 0, kWindowW, 64);
+            _collectionView.frame = CGRectMake(0, 64, kWindowW, kWindowH-64);
+        }];
+        
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

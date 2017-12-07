@@ -13,5 +13,5 @@ typedef void (^right)(void);
 @property (nonatomic,copy)left leftBlock;
 @property (nonatomic,copy)right rightBlock;
 
--(instancetype)initWithFrame:(CGRect)frame leftButtonImg:(UIImage *)btnImg btnClick:(void(^)(void))leftBtnBlock rightButton:(UIImage *)rightImg rightClick:(void(^)(void))rightBtnClick;
+-(instancetype)initWithFrame:(CGRect)frame titleImage:(UIImage *)titleImg titleString:(NSString *)titleString leftButtonImg:(UIImage *)btnImg btnClick:(void(^)(void))leftBtnBlock rightButton:(UIImage *)rightImg rightClick:(void(^)(void))rightBtnClick;
 @end

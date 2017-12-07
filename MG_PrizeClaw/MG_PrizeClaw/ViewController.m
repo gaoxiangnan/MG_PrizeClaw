@@ -65,7 +65,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  
+    self.navigationController.navigationBarHidden = YES;
     [self.view addSubview:self.BackImg];
     [self.view addSubview:self.ClawImg];
     [self.view addSubview:self.HDImg];
