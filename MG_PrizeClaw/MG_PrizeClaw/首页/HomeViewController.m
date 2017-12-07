@@ -93,7 +93,7 @@ static NSString * const reuseIdentifier = @"cell";
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
     
-    return UIEdgeInsetsMake(10, 0, 5, 0);
+    return UIEdgeInsetsMake(10, 10, 5, 10);
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

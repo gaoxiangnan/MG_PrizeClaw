@@ -26,6 +26,8 @@
 		FEFCCC3D1FD7ED8D004F26A5 /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCC341FD7ED8D004F26A5 /* SDCollectionViewCell.m */; };
 		FEFCCC3E1FD7ED8D004F26A5 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCC361FD7ED8D004F26A5 /* SDCycleScrollView.m */; };
 		FEFCCC3F1FD7ED8D004F26A5 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCC381FD7ED8D004F26A5 /* UIView+SDExtension.m */; };
+		FEFCCC421FD92094004F26A5 /* UIView+LSCore.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCC411FD92094004F26A5 /* UIView+LSCore.m */; };
+		FEFCCC451FD92388004F26A5 /* UIView+additional.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCC441FD92388004F26A5 /* UIView+additional.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,10 @@
 		FEFCCC361FD7ED8D004F26A5 /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
 		FEFCCC371FD7ED8D004F26A5 /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
 		FEFCCC381FD7ED8D004F26A5 /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
+		FEFCCC401FD92094004F26A5 /* UIView+LSCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+LSCore.h"; sourceTree = "<group>"; };
+		FEFCCC411FD92094004F26A5 /* UIView+LSCore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+LSCore.m"; sourceTree = "<group>"; };
+		FEFCCC431FD92388004F26A5 /* UIView+additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+additional.h"; sourceTree = "<group>"; };
+		FEFCCC441FD92388004F26A5 /* UIView+additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+additional.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,7 +214,11 @@
 		FEFCCC071FD7BB60004F26A5 /* OpenSource */ = {
 			isa = PBXGroup;
 			children = (
+				FEFCCC431FD92388004F26A5 /* UIView+additional.h */,
+				FEFCCC441FD92388004F26A5 /* UIView+additional.m */,
 				FEFCCC131FD7E2E2004F26A5 /* BannerView */,
+				FEFCCC401FD92094004F26A5 /* UIView+LSCore.h */,
+				FEFCCC411FD92094004F26A5 /* UIView+LSCore.m */,
 			);
 			path = OpenSource;
 			sourceTree = "<group>";
@@ -442,11 +452,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEFCCC421FD92094004F26A5 /* UIView+LSCore.m in Sources */,
 				FEFCCC3D1FD7ED8D004F26A5 /* SDCollectionViewCell.m in Sources */,
 				FEFCCC3A1FD7ED8D004F26A5 /* TAAnimatedDotView.m in Sources */,
 				FEFCCC3B1FD7ED8D004F26A5 /* TADotView.m in Sources */,
 				FE617BA61FD53B2300D9FC86 /* ViewController.m in Sources */,
 				FEFCCC111FD7CEA1004F26A5 /* HomeCollectHeaderView.m in Sources */,
+				FEFCCC451FD92388004F26A5 /* UIView+additional.m in Sources */,
 				FE617BB11FD53B2300D9FC86 /* main.m in Sources */,
 				FEFCCC391FD7ED8D004F26A5 /* TAAbstractDotView.m in Sources */,
 				FEFCCC3F1FD7ED8D004F26A5 /* UIView+SDExtension.m in Sources */,

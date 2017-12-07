@@ -7,6 +7,8 @@
 //
 
 #import "HomeCollectionViewCell.h"
+#import "UIView+additional.h"
+#define contentImgW ((kWindowW - 40)/2) - 20 //150*(375/kWindowW)
 
 @interface HomeCollectionViewCell ()
 @property (nonatomic, strong) UIImageView *contentImV;
@@ -21,7 +23,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-//        self.backgroundColor = [UIColor blueColor];
+        self.backgroundColor = [UIColor redColor];
         UIImageView *bgimV = [[UIImageView alloc]initWithFrame:self.bounds];
         bgimV.image = [UIImage imageNamed:@"mg_homecell_bg"];
         [self addSubview:bgimV];
@@ -32,22 +34,28 @@
 }
 - (void)updateCells
 {
-    [self addSubview:self.contentImV];
-    [_contentImV mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self).mas_offset(12);
-        make.top.mas_equalTo(self).mas_offset(10);
-        make.width.mas_equalTo(164);
-        make.height.mas_equalTo(130);
-    }];
+    
+    
     UIView *titleView = [UIView new];
     titleView.backgroundColor = [UIColor blueColor];
+    titleView.layer.cornerRadius = 5;
     [self addSubview:titleView];
     [titleView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(_contentImV.mas_bottom);
-        make.left.mas_equalTo(_contentImV);
-        make.width.mas_equalTo(_contentImV);
+        make.height.mas_equalTo(47.5);
+        make.left.mas_equalTo(self).mas_offset(10);
+        make.width.mas_equalTo(contentImgW);
         make.bottom.mas_equalTo(self).mas_offset(-10);
     }];
+    
+    [self addSubview:self.contentImV];
+    [_contentImV mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self).mas_offset(10);
+        make.top.mas_equalTo(self).mas_offset(10);
+        make.width.mas_equalTo(contentImgW);
+        make.height.mas_equalTo(130);
+    }];
+    
+    
     
     [titleView addSubview:self.titleLb];
     [_titleLb mas_makeConstraints:^(MASConstraintMaker *make) {
