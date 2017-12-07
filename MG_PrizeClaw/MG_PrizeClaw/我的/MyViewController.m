@@ -104,12 +104,12 @@ static NSString * const reuseIdentifier = @"cell";
         //flowLayout.itemSize = CGSizeMake();
         //flowLayout.itemSize = CGSizeMake(kWindowW, );
         //flowLayout.headerReferenceSize =CGSizeMake(CollHeaderViewW,CollHeaderViewH);//头视图大小
-        flowLayout.itemSize = CGSizeMake(kWindowW, kWindowH/3);
+        flowLayout.itemSize = CGSizeMake(kWindowW, kWindowH);
         [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
         flowLayout.minimumLineSpacing = 10;
         flowLayout.minimumInteritemSpacing = 10;
         
-        _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(10, 0, kWindowW - 20, kWindowH) collectionViewLayout:flowLayout];
+        _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(10,( kWindowH+200)/3, kWindowW - 20, kWindowH/2) collectionViewLayout:flowLayout];
         
         _collectionView.backgroundColor = [UIColor redColor];
         _collectionView.delegate = self;
@@ -138,7 +138,7 @@ static NSString * const reuseIdentifier = @"cell";
 
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 10;
+    return 1;
 }
 
 
@@ -170,7 +170,7 @@ static NSString * const reuseIdentifier = @"cell";
     _NameLabel.sd_layout.topSpaceToView(self.view, 155).widthIs(kWindowW).heightIs(50);
     _IdLabel.sd_layout.topSpaceToView(self.view, 180).widthIs(kWindowW).heightIs(50);
     _img.sd_layout.topSpaceToView(_BackView, 5).rightSpaceToView(_BackView, 20).widthIs(15).heightIs(15);
-    //_collectionView.sd_layout.topSpaceToView(self.view, 200).rightSpaceToView(self.view, 10).leftSpaceToView(self.view, 10).bottomSpaceToView(self.view, 40);
+    
 }
 
 
