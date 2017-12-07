@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A74D87061FD956D100E0697F /* FetchingRecordsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A74D87021FD956D000E0697F /* FetchingRecordsCell.m */; };
+		A74D87071FD956D100E0697F /* FetchingRecordsController.m in Sources */ = {isa = PBXBuildFile; fileRef = A74D87031FD956D000E0697F /* FetchingRecordsController.m */; };
 		A7A1F6FF1FD6715A0076F7A3 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A1F6FE1FD6715A0076F7A3 /* HomeViewController.m */; };
 		C81D591E6BCBF6C47CC03030 /* libPods-MG_PrizeClaw.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1D777541CC6BF865A12444 /* libPods-MG_PrizeClaw.a */; };
 		FE617BA31FD53B2300D9FC86 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE617BA21FD53B2300D9FC86 /* AppDelegate.m */; };
@@ -53,6 +55,10 @@
 /* Begin PBXFileReference section */
 		63745F092C230B9B62F3F0BD /* Pods-MG_PrizeClaw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MG_PrizeClaw.release.xcconfig"; path = "Pods/Target Support Files/Pods-MG_PrizeClaw/Pods-MG_PrizeClaw.release.xcconfig"; sourceTree = "<group>"; };
 		9F1D777541CC6BF865A12444 /* libPods-MG_PrizeClaw.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MG_PrizeClaw.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A74D87021FD956D000E0697F /* FetchingRecordsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchingRecordsCell.m; sourceTree = "<group>"; };
+		A74D87031FD956D000E0697F /* FetchingRecordsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchingRecordsController.m; sourceTree = "<group>"; };
+		A74D87041FD956D000E0697F /* FetchingRecordsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchingRecordsCell.h; sourceTree = "<group>"; };
+		A74D87051FD956D000E0697F /* FetchingRecordsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchingRecordsController.h; sourceTree = "<group>"; };
 		A7A1F6FD1FD6715A0076F7A3 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		A7A1F6FE1FD6715A0076F7A3 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		C06275ED6F8D3D9E775CA0BE /* Pods-MG_PrizeClaw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MG_PrizeClaw.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MG_PrizeClaw/Pods-MG_PrizeClaw.debug.xcconfig"; sourceTree = "<group>"; };
@@ -139,6 +145,18 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A74D87011FD956D000E0697F /* Fetching records */ = {
+			isa = PBXGroup;
+			children = (
+				A74D87051FD956D000E0697F /* FetchingRecordsController.h */,
+				A74D87031FD956D000E0697F /* FetchingRecordsController.m */,
+				A74D87041FD956D000E0697F /* FetchingRecordsCell.h */,
+				A74D87021FD956D000E0697F /* FetchingRecordsCell.m */,
+			);
+			name = "Fetching records";
+			path = "../../../Fetching records";
+			sourceTree = "<group>";
+		};
 		A7A1F7001FD671630076F7A3 /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +203,7 @@
 		FE617BA01FD53B2300D9FC86 /* MG_PrizeClaw */ = {
 			isa = PBXGroup;
 			children = (
+				A74D87011FD956D000E0697F /* Fetching records */,
 				FEFCCC481FD926B8004F26A5 /* 我的 */,
 				FEFCCC071FD7BB60004F26A5 /* OpenSource */,
 				FE617BA11FD53B2300D9FC86 /* AppDelegate.h */,
@@ -482,6 +501,8 @@
 				FE617BA61FD53B2300D9FC86 /* ViewController.m in Sources */,
 				FEFCCC111FD7CEA1004F26A5 /* HomeCollectHeaderView.m in Sources */,
 				FEFCCC451FD92388004F26A5 /* UIView+additional.m in Sources */,
+				A74D87061FD956D100E0697F /* FetchingRecordsCell.m in Sources */,
+				A74D87071FD956D100E0697F /* FetchingRecordsController.m in Sources */,
 				FE617BB11FD53B2300D9FC86 /* main.m in Sources */,
 				FEFCCC391FD7ED8D004F26A5 /* TAAbstractDotView.m in Sources */,
 				FEFCCC3F1FD7ED8D004F26A5 /* UIView+SDExtension.m in Sources */,
