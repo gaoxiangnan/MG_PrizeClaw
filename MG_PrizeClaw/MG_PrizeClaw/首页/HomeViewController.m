@@ -11,10 +11,15 @@
 #import "HomeCollectHeaderView.h"
 #import "NavView.h"
 
+
+
 #define CollectViewCellW (kWindowW - 40)/2
 #define CollectViewCellH             195
 #define CollHeaderViewW  (kWindowW - 40)
 #define CollHeaderViewH  175
+
+#define floatSizeW 131
+#define floatSizeH 56
 
 @interface HomeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 {
@@ -24,6 +29,7 @@
     NavView *navView;
 }
 @property (nonatomic, strong) UICollectionView *collectionView;
+
 @end
 static NSString * const reuseIdentifier = @"cell";
 @implementation HomeViewController
@@ -48,6 +54,8 @@ static NSString * const reuseIdentifier = @"cell";
     
     [self.view addSubview:self.collectionView];
 }
+
+
 - (UICollectionView *)collectionView
 {
     if (!_collectionView) {
@@ -120,21 +128,45 @@ static NSString * const reuseIdentifier = @"cell";
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
     CGFloat offsetY = scrollView.contentOffset.y + _collectionView.contentInset.top;
     if (offsetY > 64) {
-        [UIView animateWithDuration:1 animations:^{
+        [UIView animateWithDuration:0.5 animations:^{
             navView.frame = CGRectMake(0, -64, kWindowW, 64);
             _collectionView.frame = CGRectMake(0, 0, kWindowW, kWindowH);
         }];
         
     }
-    if (offsetY < -60){
-        [UIView animateWithDuration:1 animations:^{
+    if (offsetY < -40){
+        [UIView animateWithDuration:0.5 animations:^{
             navView.frame = CGRectMake(0, 0, kWindowW, 64);
             _collectionView.frame = CGRectMake(0, 64, kWindowW, kWindowH-64);
         }];
         
     }
 }
+/*
+ *重写悬浮按钮点击事件
+ */
+- (void)suspendBtnClicked:(id)sender
+{
+    [super suspendBtnClicked:sender];
+    
+    UIViewController *aVC = [[UIViewController alloc] init];
+    aVC.view.backgroundColor = [UIColor whiteColor];
+    
+    [self.navigationController pushViewController:aVC animated:YES];
+}
 
+/*
+ *重写悬浮按钮的一些属性
+ */
+- (void)configSuspendButton
+{
+    [super configSuspendButton];
+    self.spButton.layer.cornerRadius = 0;
+    self.spButton.layer.borderWidth = 0.5;
+    self.spButton.layer.borderColor = [UIColor clearColor].CGColor;
+    
+    [self.spButton setBackgroundImage:[UIImage imageNamed:@"mg_xuan_btn"] forState:UIControlStateNormal];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

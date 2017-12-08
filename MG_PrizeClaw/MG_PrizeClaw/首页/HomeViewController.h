@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SuspendButtonViewController.h"
 
-@interface HomeViewController : UIViewController
+@interface HomeViewController : SuspendButtonViewController
 
 @end

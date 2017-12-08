@@ -33,6 +33,8 @@
 		FEFCCC4F1FD926B8004F26A5 /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCC4A1FD926B8004F26A5 /* MyCollectionViewCell.m */; };
 		FEFCCC501FD926B8004F26A5 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCC4C1FD926B8004F26A5 /* MyViewController.m */; };
 		FEFCCC511FD926B8004F26A5 /* NavView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCC4E1FD926B8004F26A5 /* NavView.m */; };
+		FEFCCC9F1FD9544D004F26A5 /* SuspendButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCC9D1FD9544D004F26A5 /* SuspendButtonViewController.m */; };
+		FEFCCCA11FD9559C004F26A5 /* suspendImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEFCCCA01FD9559C004F26A5 /* suspendImage@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +110,9 @@
 		FEFCCC4C1FD926B8004F26A5 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 		FEFCCC4D1FD926B8004F26A5 /* NavView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavView.h; sourceTree = "<group>"; };
 		FEFCCC4E1FD926B8004F26A5 /* NavView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavView.m; sourceTree = "<group>"; };
+		FEFCCC9D1FD9544D004F26A5 /* SuspendButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuspendButtonViewController.m; sourceTree = "<group>"; };
+		FEFCCC9E1FD9544D004F26A5 /* SuspendButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuspendButtonViewController.h; sourceTree = "<group>"; };
+		FEFCCCA01FD9559C004F26A5 /* suspendImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "suspendImage@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +248,9 @@
 		FEFCCC071FD7BB60004F26A5 /* OpenSource */ = {
 			isa = PBXGroup;
 			children = (
+				FEFCCC9E1FD9544D004F26A5 /* SuspendButtonViewController.h */,
+				FEFCCC9D1FD9544D004F26A5 /* SuspendButtonViewController.m */,
+				FEFCCCA01FD9559C004F26A5 /* suspendImage@2x.png */,
 				FEFCCC431FD92388004F26A5 /* UIView+additional.h */,
 				FEFCCC441FD92388004F26A5 /* UIView+additional.m */,
 				FEFCCC131FD7E2E2004F26A5 /* BannerView */,
@@ -412,6 +420,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE617BAE1FD53B2300D9FC86 /* LaunchScreen.storyboard in Resources */,
+				FEFCCCA11FD9559C004F26A5 /* suspendImage@2x.png in Resources */,
 				FE617BAB1FD53B2300D9FC86 /* Assets.xcassets in Resources */,
 				FE617BA91FD53B2300D9FC86 /* Main.storyboard in Resources */,
 			);
@@ -495,6 +504,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEFCCC421FD92094004F26A5 /* UIView+LSCore.m in Sources */,
+				FEFCCC9F1FD9544D004F26A5 /* SuspendButtonViewController.m in Sources */,
 				FEFCCC3D1FD7ED8D004F26A5 /* SDCollectionViewCell.m in Sources */,
 				FEFCCC3A1FD7ED8D004F26A5 /* TAAnimatedDotView.m in Sources */,
 				FEFCCC3B1FD7ED8D004F26A5 /* TADotView.m in Sources */,

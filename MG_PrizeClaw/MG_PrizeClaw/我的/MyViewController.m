@@ -157,7 +157,7 @@ static NSString * const reuseIdentifier = @"cell";
     
     
     
-    NavView *navView = [[NavView alloc]initWithFrame:CGRectMake(0, 0, kWindowW, 64) leftButtonImg:[UIImage imageNamed:@"Backimg"] btnClick:^{
+    NavView *navView = [[NavView alloc]initWithFrame:CGRectMake(0, 0, kWindowW, 64) titleImage:[UIImage imageNamed:@"Nav"] titleString:nil  leftButtonImg:[UIImage imageNamed:@"Backimg"] btnClick:^{
         
     } rightButton:[UIImage imageNamed:@"ProImg"] rightClick:^{
         
