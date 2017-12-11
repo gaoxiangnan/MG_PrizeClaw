@@ -23,8 +23,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         
-        leftBtnBlock = self.leftBlock;
-        rightBtnClick = self.rightBlock;
+         self.leftBlock = leftBtnBlock;
+        self.rightBlock = rightBtnClick;
         
         self.backgroundColor = [UIColor clearColor];
         [self addSubview:self.LeftBtn];
