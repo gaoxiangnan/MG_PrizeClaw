@@ -40,6 +40,9 @@
 		FEFCCCD31FDE580F004F26A5 /* SettingAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCD21FDE580F004F26A5 /* SettingAddressViewController.m */; };
 		FEFCCCD61FDE582A004F26A5 /* AddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCD51FDE582A004F26A5 /* AddressTableViewCell.m */; };
 		FEFCCCD91FDE7961004F26A5 /* EditAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCD81FDE7961004F26A5 /* EditAddressViewController.m */; };
+		FEFCCCDC1FDE884A004F26A5 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCDB1FDE884A004F26A5 /* MessageViewController.m */; };
+		FEFCCCDF1FDE8929004F26A5 /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCDE1FDE8929004F26A5 /* MessageTableViewCell.m */; };
+		FEFCCCE31FDE8C0D004F26A5 /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCE21FDE8C0D004F26A5 /* MessageModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +131,12 @@
 		FEFCCCD51FDE582A004F26A5 /* AddressTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressTableViewCell.m; sourceTree = "<group>"; };
 		FEFCCCD71FDE7961004F26A5 /* EditAddressViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditAddressViewController.h; sourceTree = "<group>"; };
 		FEFCCCD81FDE7961004F26A5 /* EditAddressViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditAddressViewController.m; sourceTree = "<group>"; };
+		FEFCCCDA1FDE884A004F26A5 /* MessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		FEFCCCDB1FDE884A004F26A5 /* MessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		FEFCCCDD1FDE8929004F26A5 /* MessageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageTableViewCell.h; sourceTree = "<group>"; };
+		FEFCCCDE1FDE8929004F26A5 /* MessageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewCell.m; sourceTree = "<group>"; };
+		FEFCCCE11FDE8C0D004F26A5 /* MessageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageModel.h; sourceTree = "<group>"; };
+		FEFCCCE21FDE8C0D004F26A5 /* MessageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -330,6 +339,7 @@
 		FEFCCCCA1FDE570F004F26A5 /* SettingView */ = {
 			isa = PBXGroup;
 			children = (
+				FEFCCCE01FDE8BF6004F26A5 /* SetModel */,
 				FEFCCCCB1FDE5726004F26A5 /* SettingViewController.h */,
 				FEFCCCCC1FDE5726004F26A5 /* SettingViewController.m */,
 				FEFCCCD11FDE580F004F26A5 /* SettingAddressViewController.h */,
@@ -338,8 +348,21 @@
 				FEFCCCD51FDE582A004F26A5 /* AddressTableViewCell.m */,
 				FEFCCCD71FDE7961004F26A5 /* EditAddressViewController.h */,
 				FEFCCCD81FDE7961004F26A5 /* EditAddressViewController.m */,
+				FEFCCCDA1FDE884A004F26A5 /* MessageViewController.h */,
+				FEFCCCDB1FDE884A004F26A5 /* MessageViewController.m */,
+				FEFCCCDD1FDE8929004F26A5 /* MessageTableViewCell.h */,
+				FEFCCCDE1FDE8929004F26A5 /* MessageTableViewCell.m */,
 			);
 			path = SettingView;
+			sourceTree = "<group>";
+		};
+		FEFCCCE01FDE8BF6004F26A5 /* SetModel */ = {
+			isa = PBXGroup;
+			children = (
+				FEFCCCE11FDE8C0D004F26A5 /* MessageModel.h */,
+				FEFCCCE21FDE8C0D004F26A5 /* MessageModel.m */,
+			);
+			path = SetModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -539,11 +562,13 @@
 				FEFCCC9F1FD9544D004F26A5 /* SuspendButtonViewController.m in Sources */,
 				FEFCCCC81FDE53C0004F26A5 /* FetchingRecordsCell.m in Sources */,
 				FEFCCC3D1FD7ED8D004F26A5 /* SDCollectionViewCell.m in Sources */,
+				FEFCCCE31FDE8C0D004F26A5 /* MessageModel.m in Sources */,
 				FEFCCCD01FDE5797004F26A5 /* MG_BaseViewController.m in Sources */,
 				FEFCCC3A1FD7ED8D004F26A5 /* TAAnimatedDotView.m in Sources */,
 				FEFCCC3B1FD7ED8D004F26A5 /* TADotView.m in Sources */,
 				FE617BA61FD53B2300D9FC86 /* ViewController.m in Sources */,
 				FEFCCC111FD7CEA1004F26A5 /* HomeCollectHeaderView.m in Sources */,
+				FEFCCCDF1FDE8929004F26A5 /* MessageTableViewCell.m in Sources */,
 				FEFCCC451FD92388004F26A5 /* UIView+additional.m in Sources */,
 				FEFCCCCD1FDE5726004F26A5 /* SettingViewController.m in Sources */,
 				FE617BB11FD53B2300D9FC86 /* main.m in Sources */,
@@ -559,6 +584,7 @@
 				FEFCCC511FD926B8004F26A5 /* NavView.m in Sources */,
 				A7A1F6FF1FD6715A0076F7A3 /* HomeViewController.m in Sources */,
 				FEFCCC4F1FD926B8004F26A5 /* MyCollectionViewCell.m in Sources */,
+				FEFCCCDC1FDE884A004F26A5 /* MessageViewController.m in Sources */,
 				FEFCCCC91FDE53C0004F26A5 /* FetchingRecordsController.m in Sources */,
 				FEFCCC0D1FD7C134004F26A5 /* HomeCollectionViewCell.m in Sources */,
 			);

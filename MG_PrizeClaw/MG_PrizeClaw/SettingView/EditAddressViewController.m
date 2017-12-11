@@ -32,8 +32,7 @@
     navView = [[NavView alloc]initWithFrame:CGRectMake(0, 0, kWindowW, 64) titleImage:[UIImage imageNamed:@"Nav"] titleString:nil leftButtonImg:nil btnClick:^{
         
     } rightButton:[UIImage imageNamed:@"ProImg"] rightClick:^{
-        SettingViewController *settingVC = [[SettingViewController alloc]init];
-        [self.navigationController pushViewController:settingVC animated:YES];
+        
     }];
     navView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:navView];
