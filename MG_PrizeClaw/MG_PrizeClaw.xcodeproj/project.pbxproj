@@ -33,6 +33,8 @@
 		FEFCCC511FD926B8004F26A5 /* NavView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCC4E1FD926B8004F26A5 /* NavView.m */; };
 		FEFCCC9F1FD9544D004F26A5 /* SuspendButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCC9D1FD9544D004F26A5 /* SuspendButtonViewController.m */; };
 		FEFCCCA11FD9559C004F26A5 /* suspendImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEFCCCA01FD9559C004F26A5 /* suspendImage@2x.png */; };
+		FEFCCCC81FDE53C0004F26A5 /* FetchingRecordsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCC51FDE53C0004F26A5 /* FetchingRecordsCell.m */; };
+		FEFCCCC91FDE53C0004F26A5 /* FetchingRecordsController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCC71FDE53C0004F26A5 /* FetchingRecordsController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +109,10 @@
 		FEFCCC9D1FD9544D004F26A5 /* SuspendButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuspendButtonViewController.m; sourceTree = "<group>"; };
 		FEFCCC9E1FD9544D004F26A5 /* SuspendButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuspendButtonViewController.h; sourceTree = "<group>"; };
 		FEFCCCA01FD9559C004F26A5 /* suspendImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "suspendImage@2x.png"; sourceTree = "<group>"; };
+		FEFCCCC41FDE53C0004F26A5 /* FetchingRecordsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchingRecordsCell.h; sourceTree = "<group>"; };
+		FEFCCCC51FDE53C0004F26A5 /* FetchingRecordsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchingRecordsCell.m; sourceTree = "<group>"; };
+		FEFCCCC61FDE53C0004F26A5 /* FetchingRecordsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchingRecordsController.h; sourceTree = "<group>"; };
+		FEFCCCC71FDE53C0004F26A5 /* FetchingRecordsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchingRecordsController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +196,7 @@
 		FE617BA01FD53B2300D9FC86 /* MG_PrizeClaw */ = {
 			isa = PBXGroup;
 			children = (
+				FEFCCCC31FDE53C0004F26A5 /* Fetching records */,
 				FEFCCC481FD926B8004F26A5 /* 我的 */,
 				FEFCCC071FD7BB60004F26A5 /* OpenSource */,
 				FE617BA11FD53B2300D9FC86 /* AppDelegate.h */,
@@ -289,6 +296,17 @@
 				FEFCCC4E1FD926B8004F26A5 /* NavView.m */,
 			);
 			path = "我的";
+			sourceTree = "<group>";
+		};
+		FEFCCCC31FDE53C0004F26A5 /* Fetching records */ = {
+			isa = PBXGroup;
+			children = (
+				FEFCCCC41FDE53C0004F26A5 /* FetchingRecordsCell.h */,
+				FEFCCCC51FDE53C0004F26A5 /* FetchingRecordsCell.m */,
+				FEFCCCC61FDE53C0004F26A5 /* FetchingRecordsController.h */,
+				FEFCCCC71FDE53C0004F26A5 /* FetchingRecordsController.m */,
+			);
+			path = "Fetching records";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -486,6 +504,7 @@
 			files = (
 				FEFCCC421FD92094004F26A5 /* UIView+LSCore.m in Sources */,
 				FEFCCC9F1FD9544D004F26A5 /* SuspendButtonViewController.m in Sources */,
+				FEFCCCC81FDE53C0004F26A5 /* FetchingRecordsCell.m in Sources */,
 				FEFCCC3D1FD7ED8D004F26A5 /* SDCollectionViewCell.m in Sources */,
 				FEFCCC3A1FD7ED8D004F26A5 /* TAAnimatedDotView.m in Sources */,
 				FEFCCC3B1FD7ED8D004F26A5 /* TADotView.m in Sources */,
@@ -502,6 +521,7 @@
 				FEFCCC511FD926B8004F26A5 /* NavView.m in Sources */,
 				A7A1F6FF1FD6715A0076F7A3 /* HomeViewController.m in Sources */,
 				FEFCCC4F1FD926B8004F26A5 /* MyCollectionViewCell.m in Sources */,
+				FEFCCCC91FDE53C0004F26A5 /* FetchingRecordsController.m in Sources */,
 				FEFCCC0D1FD7C134004F26A5 /* HomeCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
