@@ -35,6 +35,10 @@
 		FEFCCCA11FD9559C004F26A5 /* suspendImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEFCCCA01FD9559C004F26A5 /* suspendImage@2x.png */; };
 		FEFCCCC81FDE53C0004F26A5 /* FetchingRecordsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCC51FDE53C0004F26A5 /* FetchingRecordsCell.m */; };
 		FEFCCCC91FDE53C0004F26A5 /* FetchingRecordsController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCC71FDE53C0004F26A5 /* FetchingRecordsController.m */; };
+		FEFCCCCD1FDE5726004F26A5 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCCC1FDE5726004F26A5 /* SettingViewController.m */; };
+		FEFCCCD01FDE5797004F26A5 /* MG_BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCCF1FDE5797004F26A5 /* MG_BaseViewController.m */; };
+		FEFCCCD31FDE580F004F26A5 /* SettingAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCD21FDE580F004F26A5 /* SettingAddressViewController.m */; };
+		FEFCCCD61FDE582A004F26A5 /* AddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCD51FDE582A004F26A5 /* AddressTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +117,14 @@
 		FEFCCCC51FDE53C0004F26A5 /* FetchingRecordsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchingRecordsCell.m; sourceTree = "<group>"; };
 		FEFCCCC61FDE53C0004F26A5 /* FetchingRecordsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchingRecordsController.h; sourceTree = "<group>"; };
 		FEFCCCC71FDE53C0004F26A5 /* FetchingRecordsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchingRecordsController.m; sourceTree = "<group>"; };
+		FEFCCCCB1FDE5726004F26A5 /* SettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		FEFCCCCC1FDE5726004F26A5 /* SettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		FEFCCCCE1FDE5797004F26A5 /* MG_BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MG_BaseViewController.h; sourceTree = "<group>"; };
+		FEFCCCCF1FDE5797004F26A5 /* MG_BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MG_BaseViewController.m; sourceTree = "<group>"; };
+		FEFCCCD11FDE580F004F26A5 /* SettingAddressViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingAddressViewController.h; sourceTree = "<group>"; };
+		FEFCCCD21FDE580F004F26A5 /* SettingAddressViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingAddressViewController.m; sourceTree = "<group>"; };
+		FEFCCCD41FDE582A004F26A5 /* AddressTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressTableViewCell.h; sourceTree = "<group>"; };
+		FEFCCCD51FDE582A004F26A5 /* AddressTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +208,7 @@
 		FE617BA01FD53B2300D9FC86 /* MG_PrizeClaw */ = {
 			isa = PBXGroup;
 			children = (
+				FEFCCCCA1FDE570F004F26A5 /* SettingView */,
 				FEFCCCC31FDE53C0004F26A5 /* Fetching records */,
 				FEFCCC481FD926B8004F26A5 /* 我的 */,
 				FEFCCC071FD7BB60004F26A5 /* OpenSource */,
@@ -203,6 +216,8 @@
 				FE617BA21FD53B2300D9FC86 /* AppDelegate.m */,
 				FE617BA41FD53B2300D9FC86 /* ViewController.h */,
 				FE617BA51FD53B2300D9FC86 /* ViewController.m */,
+				FEFCCCCE1FDE5797004F26A5 /* MG_BaseViewController.h */,
+				FEFCCCCF1FDE5797004F26A5 /* MG_BaseViewController.m */,
 				A7A1F7001FD671630076F7A3 /* 首页 */,
 				FE617BA71FD53B2300D9FC86 /* Main.storyboard */,
 				FE617BAA1FD53B2300D9FC86 /* Assets.xcassets */,
@@ -307,6 +322,19 @@
 				FEFCCCC71FDE53C0004F26A5 /* FetchingRecordsController.m */,
 			);
 			path = "Fetching records";
+			sourceTree = "<group>";
+		};
+		FEFCCCCA1FDE570F004F26A5 /* SettingView */ = {
+			isa = PBXGroup;
+			children = (
+				FEFCCCCB1FDE5726004F26A5 /* SettingViewController.h */,
+				FEFCCCCC1FDE5726004F26A5 /* SettingViewController.m */,
+				FEFCCCD11FDE580F004F26A5 /* SettingAddressViewController.h */,
+				FEFCCCD21FDE580F004F26A5 /* SettingAddressViewController.m */,
+				FEFCCCD41FDE582A004F26A5 /* AddressTableViewCell.h */,
+				FEFCCCD51FDE582A004F26A5 /* AddressTableViewCell.m */,
+			);
+			path = SettingView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -506,17 +534,21 @@
 				FEFCCC9F1FD9544D004F26A5 /* SuspendButtonViewController.m in Sources */,
 				FEFCCCC81FDE53C0004F26A5 /* FetchingRecordsCell.m in Sources */,
 				FEFCCC3D1FD7ED8D004F26A5 /* SDCollectionViewCell.m in Sources */,
+				FEFCCCD01FDE5797004F26A5 /* MG_BaseViewController.m in Sources */,
 				FEFCCC3A1FD7ED8D004F26A5 /* TAAnimatedDotView.m in Sources */,
 				FEFCCC3B1FD7ED8D004F26A5 /* TADotView.m in Sources */,
 				FE617BA61FD53B2300D9FC86 /* ViewController.m in Sources */,
 				FEFCCC111FD7CEA1004F26A5 /* HomeCollectHeaderView.m in Sources */,
 				FEFCCC451FD92388004F26A5 /* UIView+additional.m in Sources */,
+				FEFCCCCD1FDE5726004F26A5 /* SettingViewController.m in Sources */,
 				FE617BB11FD53B2300D9FC86 /* main.m in Sources */,
+				FEFCCCD31FDE580F004F26A5 /* SettingAddressViewController.m in Sources */,
 				FEFCCC391FD7ED8D004F26A5 /* TAAbstractDotView.m in Sources */,
 				FEFCCC3F1FD7ED8D004F26A5 /* UIView+SDExtension.m in Sources */,
 				FEFCCC3E1FD7ED8D004F26A5 /* SDCycleScrollView.m in Sources */,
 				FE617BA31FD53B2300D9FC86 /* AppDelegate.m in Sources */,
 				FEFCCC501FD926B8004F26A5 /* MyViewController.m in Sources */,
+				FEFCCCD61FDE582A004F26A5 /* AddressTableViewCell.m in Sources */,
 				FEFCCC3C1FD7ED8D004F26A5 /* TAPageControl.m in Sources */,
 				FEFCCC511FD926B8004F26A5 /* NavView.m in Sources */,
 				A7A1F6FF1FD6715A0076F7A3 /* HomeViewController.m in Sources */,
