@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+typedef void (^EditBlock)(void);
+typedef void (^DeleteBlock)(void);;
 @interface AddressTableViewCell : UITableViewCell
+
+@property (nonatomic, copy) EditBlock editBlock;
+@property (nonatomic, copy) DeleteBlock deleteBlock;
 
 @end

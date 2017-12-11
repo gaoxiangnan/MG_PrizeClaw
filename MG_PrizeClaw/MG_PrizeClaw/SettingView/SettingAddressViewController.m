@@ -9,6 +9,7 @@
 #import "SettingAddressViewController.h"
 #import "AddressTableViewCell.h"
 #import "NavView.h"
+#import "EditAddressViewController.h"
 
 @interface SettingAddressViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -63,6 +64,14 @@
     if (!cell) {
         cell = [[AddressTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
     }
+    cell.editBlock = ^(){
+        NPrintLog(@"点击编辑");
+        EditAddressViewController *editVC = [[EditAddressViewController alloc]init];
+        [self.navigationController pushViewController:editVC animated:YES];
+    };
+    cell.deleteBlock = ^(){
+        NPrintLog(@"点击删除");
+    };
     return cell;
 }
 - (void)didReceiveMemoryWarning {

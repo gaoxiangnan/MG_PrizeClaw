@@ -137,11 +137,15 @@
 }
 - (void)onEditClick
 {
-    
+    if (_editBlock) {
+        _editBlock();
+    }
 }
 - (void)onDeleteClick
 {
-    
+    if (_deleteBlock) {
+        _deleteBlock;
+    }
 }
 - (void)awakeFromNib {
     [super awakeFromNib];
