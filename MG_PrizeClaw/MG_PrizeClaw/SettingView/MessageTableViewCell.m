@@ -7,6 +7,8 @@
 //
 
 #import "MessageTableViewCell.h"
+#define HeaderImvW 55
+#define BrowImvW 20
 @interface MessageTableViewCell()
 @property (nonatomic, strong) UIImageView *headerImV;
 @property (nonatomic, strong) UILabel *titleLb;
@@ -20,6 +22,8 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        self.backgroundColor = kRGBColor(177, 247, 251);
+
         [self updateViews];
     }
     return self;
@@ -50,12 +54,21 @@
     [_contentLb mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(_titleLb).mas_offset(10);
         make.top.mas_equalTo(_titleLb.mas_bottom);
+        make.width.mas_equalTo(kWindowW - HeaderImvW - BrowImvW - 40);
     }];
     
     [self addSubview:self.dateShowLb];
     [_dateShowLb mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(_contentLb).mas_offset(10);
-        make.top.mas_equalTo(_contentLb.mas_bottom);
+        make.bottom.mas_equalTo(self.mas_bottom).mas_offset(-10);
+    }];
+    
+    UIImageView *brow = [[UIImageView alloc]init];
+    brow.image = [UIImage imageNamed:@"mg_brow_right"];
+    [self addSubview:brow];
+    [brow mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.mas_equalTo(self);
+        make.right.mas_equalTo(self.mas_right).mas_offset(-10);
     }];
 }
 - (UIImageView *)headerImV
@@ -80,9 +93,10 @@
 {
     if (!_contentLb) {
         _contentLb = [UILabel new];
-        _contentLb.text = @"欢迎来到趣抓，600金币已赠送到您的账户欢迎来到趣抓，600金币已赠送到您的账户欢迎来到趣抓，600金币已赠送到您的账户";
+        _contentLb.text = @"欢迎来到趣抓，600金币已赠送到您的账户欢迎来到趣抓";
         _contentLb.textColor = [UIColor darkGrayColor];
         _contentLb.font = [UIFont systemFontOfSize:14 weight:UIFontWeightRegular];
+        _contentLb.numberOfLines = 0;
     }
     return _contentLb;
 }
@@ -100,15 +114,10 @@
     [super awakeFromNib];
     // Initialization code
 }
-/*
- @method 获取指定宽度width的字符串在UITextView上的高度
- @param textView 待计算的UITextView
- @param Width 限制字符串显示区域的宽度
- @result float 返回的高度
- */
-- (float) heightForString:(UILabel *)textLb andWidth:(float)width{
-    CGSize sizeToFit = [textLb sizeThatFits:CGSizeMake(width, MAXFLOAT)];
-    return sizeToFit.height;
+
++ (float) heightForString:(NSString *)textStr{
+    CGSize textSize = [textStr boundingRectWithSize:CGSizeMake(kWindowW - HeaderImvW - BrowImvW - 40, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size;
+    return textSize.height;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

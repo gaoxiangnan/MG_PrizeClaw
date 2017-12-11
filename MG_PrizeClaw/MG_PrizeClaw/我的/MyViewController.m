@@ -9,7 +9,15 @@
 #import "MyViewController.h"
 #import "UIView+SDAutoLayout.h"
 #import "NavView.h"
-#import "MyCollectionViewCell.h"
+#import "HomeCollectionViewCell.h"
+#define CollectViewCellW (kWindowW - 40)/2
+#define CollectViewCellH             195
+#define CollHeaderViewW  (kWindowW - 40)
+#define CollHeaderViewH  175
+
+#define floatSizeW 131
+#define floatSizeH 56
+
 @interface MyViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 
 @property(nonatomic,strong)UIImageView *BackImg;
@@ -24,7 +32,28 @@
 @end
 static NSString * const reuseIdentifier = @"cell";
 @implementation MyViewController
-
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [self.view addSubview:self.BackImg];
+    [self.view addSubview:self.HeadImg];
+    [self.HeadImg addSubview:self.HeadBtn];
+    [self.view addSubview:self.NameLabel];
+    [self.view addSubview:self.IdLabel];
+    [self.view addSubview:self.BackView];
+    
+    [self.view addSubview:self.collectionView];
+    
+    
+    
+    NavView *navView = [[NavView alloc]initWithFrame:CGRectMake(0, 0, kWindowW, 64) titleImage:[UIImage imageNamed:@"Nav"] titleString:nil  leftButtonImg:[UIImage imageNamed:@"Backimg"] btnClick:^{
+        [self.navigationController popViewControllerAnimated:YES];
+    } rightButton:[UIImage imageNamed:@"ProImg"] rightClick:^{
+        
+    }];
+    [self.view addSubview:navView];
+    [self adap];
+}
 -(UIImageView *)BackImg
 {
     if (!_BackImg) {
@@ -101,31 +130,31 @@ static NSString * const reuseIdentifier = @"cell";
     if (!_collectionView) {
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
         
-        //flowLayout.itemSize = CGSizeMake();
-        //flowLayout.itemSize = CGSizeMake(kWindowW, );
-        //flowLayout.headerReferenceSize =CGSizeMake(CollHeaderViewW,CollHeaderViewH);//头视图大小
-        flowLayout.itemSize = CGSizeMake(kWindowW, kWindowH);
+        flowLayout.itemSize = CGSizeMake(CollectViewCellW, CollectViewCellH);
         [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
         flowLayout.minimumLineSpacing = 10;
         flowLayout.minimumInteritemSpacing = 10;
         
-        _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(10,( kWindowH+200)/3, kWindowW - 20, kWindowH/2) collectionViewLayout:flowLayout];
+        _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 400, kWindowW, kWindowH-400) collectionViewLayout:flowLayout];
         
         _collectionView.backgroundColor = [UIColor redColor];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
         _collectionView.showsVerticalScrollIndicator = NO;
         
-        [_collectionView registerClass:[MyCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-      
-        
+        [_collectionView registerClass:[HomeCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     }
     return _collectionView;
 }
+//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
+//    return CGSizeMake(CollHeaderViewW, CollHeaderViewH);
+//}
+
+
 -(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    MyCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    HomeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     return cell;
 }
@@ -138,33 +167,27 @@ static NSString * const reuseIdentifier = @"cell";
 
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 1;
+    return 2;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+
+//- (CGSize)sizeForChildContentContainer:(nonnull id<UIContentContainer>)container withParentContainerSize:(CGSize)parentSize
+//{
+//    return CGSizeMake(CollectViewCellW, CollectViewCellH);
+//}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
+    
+    return UIEdgeInsetsMake(10, 10, 5, 10);
 }
 
 
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-   
-    [self.view addSubview:self.BackImg];
-    [self.view addSubview:self.HeadImg];
-    [self.HeadImg addSubview:self.HeadBtn];
-    [self.view addSubview:self.NameLabel];
-    [self.view addSubview:self.IdLabel];
-    [self.view addSubview:self.BackView];
-    
-    [self.view addSubview:self.collectionView];
-    
-    
-    
-    NavView *navView = [[NavView alloc]initWithFrame:CGRectMake(0, 0, kWindowW, 64) titleImage:[UIImage imageNamed:@"Nav"] titleString:nil  leftButtonImg:[UIImage imageNamed:@"Backimg"] btnClick:^{
-        
-    } rightButton:[UIImage imageNamed:@"ProImg"] rightClick:^{
-        
-    }];
-    [self.view addSubview:navView];
-    [self adap];
-}
+
 -(void)adap{
     _HeadBtn.sd_layout.topSpaceToView(_HeadImg, 5).leftSpaceToView(_HeadImg, 5).rightSpaceToView(_HeadImg, 5).bottomSpaceToView(_HeadImg, 5);
     _NameLabel.sd_layout.topSpaceToView(self.view, 155).widthIs(kWindowW).heightIs(50);

@@ -9,6 +9,7 @@
 #import "SettingViewController.h"
 #import "NavView.h"
 #import "SettingAddressViewController.h"
+#import "MessageViewController.h"
 
 @interface SettingViewController ()
 {
@@ -270,7 +271,8 @@
 }
 - (void)onXXTapGes:(UITapGestureRecognizer *)ges
 {
-    
+    MessageViewController *meVC = [[MessageViewController alloc]init];
+    [self.navigationController pushViewController:meVC animated:YES];
 }
 - (void)onBgSwitch:(UISwitch *)swh
 {

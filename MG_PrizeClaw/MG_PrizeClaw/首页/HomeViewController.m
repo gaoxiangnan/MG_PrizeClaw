@@ -11,6 +11,8 @@
 #import "HomeCollectHeaderView.h"
 #import "NavView.h"
 #import "SettingViewController.h"
+#import "FetchingRecordsController.h"
+#import "MyViewController.h"
 
 
 
@@ -45,7 +47,8 @@ static NSString * const reuseIdentifier = @"cell";
     [self.view addSubview:bgImV];
     
     navView = [[NavView alloc]initWithFrame:CGRectMake(0, 0, kWindowW, 64) titleImage:[UIImage imageNamed:@"Nav"] titleString:nil leftButtonImg:nil btnClick:^{
-        
+        MyViewController *fetVC = [[MyViewController alloc]init];
+        [self.navigationController pushViewController:fetVC animated:YES];
     } rightButton:[UIImage imageNamed:@"ProImg"] rightClick:^{
         SettingViewController *settingVC = [[SettingViewController alloc]init];
         [self.navigationController pushViewController:settingVC animated:YES];
@@ -75,7 +78,6 @@ static NSString * const reuseIdentifier = @"cell";
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
         _collectionView.showsVerticalScrollIndicator = NO;
-//        _collectionView.
         
         [_collectionView registerClass:[HomeCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
         [_collectionView registerClass:[HomeCollectHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];

@@ -33,7 +33,7 @@
         [self addSubview:self.titleLb];
         [_titleLb mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(self);
-            make.top.mas_equalTo(20);
+            make.top.mas_equalTo(30);
             make.right.mas_equalTo(self.mas_right);
         }];
         if (titleImg) {

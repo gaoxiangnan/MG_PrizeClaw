@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MessageTableViewCell : UITableViewCell
-
++ (float) heightForString:(NSString *)textStr;
 @end

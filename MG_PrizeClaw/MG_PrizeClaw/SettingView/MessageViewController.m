@@ -30,6 +30,7 @@
     [self.view addSubview:navView];
     
     _messageTab = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, kWindowW, kWindowH - 64) style:UITableViewStylePlain];
+    _messageTab.backgroundColor = [UIColor clearColor];
     _messageTab.delegate = self;
     _messageTab.dataSource = self;
     _messageTab.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -39,7 +40,10 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 140;
+    NSString *str = @"欢迎来到趣抓，600金币已赠送到您的账户欢迎来到趣抓";
+    CGFloat a = [MessageTableViewCell heightForString:str];
+    return a+65;
+//    return 140;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
@@ -52,8 +56,6 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSString *str = @"欢迎来到趣抓，600金币已赠送到您的账户欢迎来到趣抓，600金币已赠送到您的账户欢迎来到趣抓，600金币已赠送到您的账户";
-    
     return 1;
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

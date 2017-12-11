@@ -28,7 +28,6 @@
 		FEFCCC3F1FD7ED8D004F26A5 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCC381FD7ED8D004F26A5 /* UIView+SDExtension.m */; };
 		FEFCCC421FD92094004F26A5 /* UIView+LSCore.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCC411FD92094004F26A5 /* UIView+LSCore.m */; };
 		FEFCCC451FD92388004F26A5 /* UIView+additional.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCC441FD92388004F26A5 /* UIView+additional.m */; };
-		FEFCCC4F1FD926B8004F26A5 /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCC4A1FD926B8004F26A5 /* MyCollectionViewCell.m */; };
 		FEFCCC501FD926B8004F26A5 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCC4C1FD926B8004F26A5 /* MyViewController.m */; };
 		FEFCCC511FD926B8004F26A5 /* NavView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCC4E1FD926B8004F26A5 /* NavView.m */; };
 		FEFCCC9F1FD9544D004F26A5 /* SuspendButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCC9D1FD9544D004F26A5 /* SuspendButtonViewController.m */; };
@@ -108,8 +107,6 @@
 		FEFCCC411FD92094004F26A5 /* UIView+LSCore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+LSCore.m"; sourceTree = "<group>"; };
 		FEFCCC431FD92388004F26A5 /* UIView+additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+additional.h"; sourceTree = "<group>"; };
 		FEFCCC441FD92388004F26A5 /* UIView+additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+additional.m"; sourceTree = "<group>"; };
-		FEFCCC491FD926B8004F26A5 /* MyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewCell.h; sourceTree = "<group>"; };
-		FEFCCC4A1FD926B8004F26A5 /* MyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewCell.m; sourceTree = "<group>"; };
 		FEFCCC4B1FD926B8004F26A5 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
 		FEFCCC4C1FD926B8004F26A5 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 		FEFCCC4D1FD926B8004F26A5 /* NavView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavView.h; sourceTree = "<group>"; };
@@ -315,8 +312,6 @@
 		FEFCCC481FD926B8004F26A5 /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
-				FEFCCC491FD926B8004F26A5 /* MyCollectionViewCell.h */,
-				FEFCCC4A1FD926B8004F26A5 /* MyCollectionViewCell.m */,
 				FEFCCC4B1FD926B8004F26A5 /* MyViewController.h */,
 				FEFCCC4C1FD926B8004F26A5 /* MyViewController.m */,
 				FEFCCC4D1FD926B8004F26A5 /* NavView.h */,
@@ -583,7 +578,6 @@
 				FEFCCC3C1FD7ED8D004F26A5 /* TAPageControl.m in Sources */,
 				FEFCCC511FD926B8004F26A5 /* NavView.m in Sources */,
 				A7A1F6FF1FD6715A0076F7A3 /* HomeViewController.m in Sources */,
-				FEFCCC4F1FD926B8004F26A5 /* MyCollectionViewCell.m in Sources */,
 				FEFCCCDC1FDE884A004F26A5 /* MessageViewController.m in Sources */,
 				FEFCCCC91FDE53C0004F26A5 /* FetchingRecordsController.m in Sources */,
 				FEFCCC0D1FD7C134004F26A5 /* HomeCollectionViewCell.m in Sources */,
