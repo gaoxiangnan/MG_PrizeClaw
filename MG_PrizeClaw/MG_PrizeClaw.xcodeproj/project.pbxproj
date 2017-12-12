@@ -42,6 +42,7 @@
 		FEFCCCDC1FDE884A004F26A5 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCDB1FDE884A004F26A5 /* MessageViewController.m */; };
 		FEFCCCDF1FDE8929004F26A5 /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCDE1FDE8929004F26A5 /* MessageTableViewCell.m */; };
 		FEFCCCE31FDE8C0D004F26A5 /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCE21FDE8C0D004F26A5 /* MessageModel.m */; };
+		FEFCCCE61FDFAAD0004F26A5 /* RecordsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCE51FDFAAD0004F26A5 /* RecordsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +135,8 @@
 		FEFCCCDE1FDE8929004F26A5 /* MessageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewCell.m; sourceTree = "<group>"; };
 		FEFCCCE11FDE8C0D004F26A5 /* MessageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageModel.h; sourceTree = "<group>"; };
 		FEFCCCE21FDE8C0D004F26A5 /* MessageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageModel.m; sourceTree = "<group>"; };
+		FEFCCCE41FDFAAD0004F26A5 /* RecordsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecordsViewController.h; sourceTree = "<group>"; };
+		FEFCCCE51FDFAAD0004F26A5 /* RecordsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecordsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +319,8 @@
 				FEFCCC4C1FD926B8004F26A5 /* MyViewController.m */,
 				FEFCCC4D1FD926B8004F26A5 /* NavView.h */,
 				FEFCCC4E1FD926B8004F26A5 /* NavView.m */,
+				FEFCCCE41FDFAAD0004F26A5 /* RecordsViewController.h */,
+				FEFCCCE51FDFAAD0004F26A5 /* RecordsViewController.m */,
 			);
 			path = "我的";
 			sourceTree = "<group>";
@@ -556,6 +561,7 @@
 				FEFCCC421FD92094004F26A5 /* UIView+LSCore.m in Sources */,
 				FEFCCC9F1FD9544D004F26A5 /* SuspendButtonViewController.m in Sources */,
 				FEFCCCC81FDE53C0004F26A5 /* FetchingRecordsCell.m in Sources */,
+				FEFCCCE61FDFAAD0004F26A5 /* RecordsViewController.m in Sources */,
 				FEFCCC3D1FD7ED8D004F26A5 /* SDCollectionViewCell.m in Sources */,
 				FEFCCCE31FDE8C0D004F26A5 /* MessageModel.m in Sources */,
 				FEFCCCD01FDE5797004F26A5 /* MG_BaseViewController.m in Sources */,

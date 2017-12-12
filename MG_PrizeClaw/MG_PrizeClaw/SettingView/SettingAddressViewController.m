@@ -28,6 +28,8 @@
     } rightButton:[UIImage imageNamed:@"ProImg"] rightClick:^{
         
     }];
+    navView.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:navView];
     
     _addressTab = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, kWindowW, kWindowH - 64) style:UITableViewStylePlain];
     _addressTab.delegate = self;

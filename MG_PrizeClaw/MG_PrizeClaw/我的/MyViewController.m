@@ -9,7 +9,8 @@
 #import "MyViewController.h"
 #import "UIView+SDAutoLayout.h"
 #import "NavView.h"
-#import "HomeCollectionViewCell.h"
+#import "RecordsViewController.h"
+
 #define CollectViewCellW (kWindowW - 40)/2
 #define CollectViewCellH             195
 #define CollHeaderViewW  (kWindowW - 40)
@@ -50,7 +51,8 @@ static NSString * const reuseIdentifier = @"cell";
     NavView *navView = [[NavView alloc]initWithFrame:CGRectMake(0, 0, kWindowW, 64) titleImage:[UIImage imageNamed:@"Nav"] titleString:nil  leftButtonImg:[UIImage imageNamed:@"Backimg"] btnClick:^{
         [self.navigationController popViewControllerAnimated:YES];
     } rightButton:[UIImage imageNamed:@"ProImg"] rightClick:^{
-        
+        RecordsViewController *recoVC = [[RecordsViewController alloc]init];
+        [self.navigationController pushViewController:recoVC animated:YES];
     }];
     [self.view addSubview:navView];
     [self adap];
