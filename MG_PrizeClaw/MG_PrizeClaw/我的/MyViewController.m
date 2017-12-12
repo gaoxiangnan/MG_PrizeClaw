@@ -43,7 +43,14 @@ static NSString * const reuseIdentifier = @"cell";
     [self.HeadImg addSubview:self.HeadBtn];
     [self.view addSubview:self.NameLabel];
     [self.view addSubview:self.IdLabel];
+    
     [self.view addSubview:self.BackView];
+    [_BackView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.mas_equalTo(self.view);
+        make.width.mas_equalTo(250);
+        make.top.mas_equalTo(230);
+        make.height.mas_equalTo(25);
+    }];
     
     [self.view addSubview:self.collectionView];
     
@@ -117,14 +124,30 @@ static NSString * const reuseIdentifier = @"cell";
 -(UIView *)BackView
 {
     if (!_BackView) {
-        _BackView  = [[UIView alloc]initWithFrame:CGRectMake((self.view.frame.size.width-200)/2, 230, 200, 25)];
+        _BackView  = [UIView new];
         
         _BackView.layer.cornerRadius = 12.5f;
         
-        _img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"金币"]];
         
+        _showLabel = [[UILabel alloc]init];
+        _showLabel.text = @"抓中次数：2次 | 余额：99";
+        _showLabel.textColor = [UIColor whiteColor];
+        _showLabel.textAlignment = NSTextAlignmentCenter;
+        _showLabel.font = [UIFont systemFontOfSize:14 weight:UIFontWeightThin];
+        [self.BackView addSubview:_showLabel];
+        [_showLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(_BackView).mas_offset(20);
+            make.centerY.mas_equalTo(_BackView);
+        }];
+        _img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"金币"]];
+        [self.BackView addSubview:_img];
+        [_img mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(_showLabel.mas_right).mas_offset(10);
+            make.centerY.mas_equalTo(_BackView);
+        }];
         _BackView.backgroundColor = [UIColor colorWithRed:69/225.0f green:139/225.0f blue:152/225.0f alpha:.5f];
-        [self.BackView addSubview:self.img];
+        
+        
     }
     return _BackView;
 }
@@ -193,7 +216,9 @@ static NSString * const reuseIdentifier = @"cell";
     _HeadBtn.sd_layout.topSpaceToView(_HeadImg, 5).leftSpaceToView(_HeadImg, 5).rightSpaceToView(_HeadImg, 5).bottomSpaceToView(_HeadImg, 5);
     _NameLabel.sd_layout.topSpaceToView(self.view, 155).widthIs(kWindowW).heightIs(50);
     _IdLabel.sd_layout.topSpaceToView(self.view, 180).widthIs(kWindowW).heightIs(50);
-    _img.sd_layout.topSpaceToView(_BackView, 5).rightSpaceToView(_BackView, 20).widthIs(15).heightIs(15);
+    
+//    _showLabel.sd_layout.topSpaceToView(_BackView, 5).leftSpaceToView(_BackView, 20).widthIs(150).heightIs(15);
+//    _img.sd_layout.topSpaceToView(_BackView, 5).leftSpaceToView(_showLabel, 20).widthIs(15).heightIs(15);
     
 }
 

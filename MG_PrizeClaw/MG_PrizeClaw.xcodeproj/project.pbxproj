@@ -220,6 +220,7 @@
 		FE617BA01FD53B2300D9FC86 /* MG_PrizeClaw */ = {
 			isa = PBXGroup;
 			children = (
+				FEFCCCE71FDFB3DA004F26A5 /* GameView */,
 				FEFCCCCA1FDE570F004F26A5 /* SettingView */,
 				FEFCCCC31FDE53C0004F26A5 /* Fetching records */,
 				FEFCCC481FD926B8004F26A5 /* 我的 */,
@@ -363,6 +364,13 @@
 				FEFCCCE21FDE8C0D004F26A5 /* MessageModel.m */,
 			);
 			path = SetModel;
+			sourceTree = "<group>";
+		};
+		FEFCCCE71FDFB3DA004F26A5 /* GameView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GameView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
