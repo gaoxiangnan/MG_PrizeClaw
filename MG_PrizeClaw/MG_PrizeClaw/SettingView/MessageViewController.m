@@ -23,7 +23,7 @@
     
     navView = [[NavView alloc]initWithFrame:CGRectMake(0, 0, kWindowW, 64) titleImage:nil titleString:@"消息中心" leftButtonImg:[UIImage imageNamed:@"Backimg"] btnClick:^{
         [self.navigationController popViewControllerAnimated:YES];
-    } rightButton:[UIImage imageNamed:@"ProImg"] rightClick:^{
+    } rightButton:nil rightClick:^{
         
     }];
     navView.backgroundColor = [UIColor clearColor];

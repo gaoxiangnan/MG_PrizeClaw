@@ -29,13 +29,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    navView = [[NavView alloc]initWithFrame:CGRectMake(0, 0, kWindowW, 64) titleImage:[UIImage imageNamed:@"Nav"] titleString:nil leftButtonImg:[UIImage imageNamed:@"Backimg"] btnClick:^{
+    navView = [[NavView alloc]initWithFrame:CGRectMake(0, 0, kWindowW, 64) titleImage:nil titleString:nil leftButtonImg:[UIImage imageNamed:@"Backimg"] btnClick:^{
         [self.navigationController popViewControllerAnimated:YES];
-    } rightButton:[UIImage imageNamed:@"ProImg"] rightClick:^{
+    } rightButton:nil rightClick:^{
         
     }];
     navView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:navView];
+    
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake((self.view.frame.size.width-100)/2, 20, 100, 50)];
+    label.text = @"添加地址";
+    label.font = [UIFont boldSystemFontOfSize:20.0f];
+    label.textColor = [UIColor blackColor];
+    [self.view addSubview:label];
     
     UIView *bgView = [[UIView alloc]initWithFrame:CGRectMake(0, 64, kWindowW, kWindowH-64)];
     bgView.backgroundColor = [UIColor clearColor];
