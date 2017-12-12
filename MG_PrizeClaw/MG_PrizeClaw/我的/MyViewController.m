@@ -26,6 +26,7 @@
 @property(nonatomic,strong)UILabel *NameLabel,*IdLabel;
 @property(nonatomic,strong)UIView  *BackView;
 @property(nonatomic,strong)UIImageView *img;
+@property (nonatomic, strong)UILabel *showLabel;
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 
@@ -135,7 +136,7 @@ static NSString * const reuseIdentifier = @"cell";
         flowLayout.minimumLineSpacing = 10;
         flowLayout.minimumInteritemSpacing = 10;
         
-        _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 400, kWindowW, kWindowH-400) collectionViewLayout:flowLayout];
+        _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 280, kWindowW, kWindowH-280) collectionViewLayout:flowLayout];
         
         _collectionView.backgroundColor = [UIColor redColor];
         _collectionView.delegate = self;
@@ -146,9 +147,6 @@ static NSString * const reuseIdentifier = @"cell";
     }
     return _collectionView;
 }
-//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
-//    return CGSizeMake(CollHeaderViewW, CollHeaderViewH);
-//}
 
 
 -(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
