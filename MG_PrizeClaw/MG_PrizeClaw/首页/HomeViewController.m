@@ -14,6 +14,7 @@
 #import "FetchingRecordsController.h"
 #import "MyViewController.h"
 #import "RecordsViewController.h"
+#import "GamePlayViewController.h"
 
 
 
@@ -116,7 +117,8 @@ static NSString * const reuseIdentifier = @"cell";
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    GamePlayViewController *gameVC = [[GamePlayViewController alloc]init];
+    [self.navigationController pushViewController:gameVC animated:YES];
 }
 
 - (CGSize)sizeForChildContentContainer:(nonnull id<UIContentContainer>)container withParentContainerSize:(CGSize)parentSize

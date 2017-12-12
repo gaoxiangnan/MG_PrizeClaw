@@ -43,6 +43,8 @@
 		FEFCCCDF1FDE8929004F26A5 /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCDE1FDE8929004F26A5 /* MessageTableViewCell.m */; };
 		FEFCCCE31FDE8C0D004F26A5 /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCE21FDE8C0D004F26A5 /* MessageModel.m */; };
 		FEFCCCE61FDFAAD0004F26A5 /* RecordsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCE51FDFAAD0004F26A5 /* RecordsViewController.m */; };
+		FEFCCCEA1FDFB44C004F26A5 /* GamePlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCE91FDFB44C004F26A5 /* GamePlayViewController.m */; };
+		FEFCCCED1FDFB524004F26A5 /* InstructionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCEC1FDFB524004F26A5 /* InstructionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +139,10 @@
 		FEFCCCE21FDE8C0D004F26A5 /* MessageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageModel.m; sourceTree = "<group>"; };
 		FEFCCCE41FDFAAD0004F26A5 /* RecordsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecordsViewController.h; sourceTree = "<group>"; };
 		FEFCCCE51FDFAAD0004F26A5 /* RecordsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecordsViewController.m; sourceTree = "<group>"; };
+		FEFCCCE81FDFB44C004F26A5 /* GamePlayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GamePlayViewController.h; sourceTree = "<group>"; };
+		FEFCCCE91FDFB44C004F26A5 /* GamePlayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GamePlayViewController.m; sourceTree = "<group>"; };
+		FEFCCCEB1FDFB524004F26A5 /* InstructionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstructionViewController.h; sourceTree = "<group>"; };
+		FEFCCCEC1FDFB524004F26A5 /* InstructionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstructionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -369,6 +375,10 @@
 		FEFCCCE71FDFB3DA004F26A5 /* GameView */ = {
 			isa = PBXGroup;
 			children = (
+				FEFCCCE81FDFB44C004F26A5 /* GamePlayViewController.h */,
+				FEFCCCE91FDFB44C004F26A5 /* GamePlayViewController.m */,
+				FEFCCCEB1FDFB524004F26A5 /* InstructionViewController.h */,
+				FEFCCCEC1FDFB524004F26A5 /* InstructionViewController.m */,
 			);
 			path = GameView;
 			sourceTree = "<group>";
@@ -568,6 +578,7 @@
 			files = (
 				FEFCCC421FD92094004F26A5 /* UIView+LSCore.m in Sources */,
 				FEFCCC9F1FD9544D004F26A5 /* SuspendButtonViewController.m in Sources */,
+				FEFCCCEA1FDFB44C004F26A5 /* GamePlayViewController.m in Sources */,
 				FEFCCCC81FDE53C0004F26A5 /* FetchingRecordsCell.m in Sources */,
 				FEFCCCE61FDFAAD0004F26A5 /* RecordsViewController.m in Sources */,
 				FEFCCC3D1FD7ED8D004F26A5 /* SDCollectionViewCell.m in Sources */,
@@ -575,6 +586,7 @@
 				FEFCCCD01FDE5797004F26A5 /* MG_BaseViewController.m in Sources */,
 				FEFCCC3A1FD7ED8D004F26A5 /* TAAnimatedDotView.m in Sources */,
 				FEFCCC3B1FD7ED8D004F26A5 /* TADotView.m in Sources */,
+				FEFCCCED1FDFB524004F26A5 /* InstructionViewController.m in Sources */,
 				FE617BA61FD53B2300D9FC86 /* ViewController.m in Sources */,
 				FEFCCC111FD7CEA1004F26A5 /* HomeCollectHeaderView.m in Sources */,
 				FEFCCCDF1FDE8929004F26A5 /* MessageTableViewCell.m in Sources */,
