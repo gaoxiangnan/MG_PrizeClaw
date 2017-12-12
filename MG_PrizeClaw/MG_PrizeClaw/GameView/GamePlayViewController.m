@@ -25,9 +25,12 @@
         InstructionViewController *instrucVC = [[InstructionViewController alloc]init];
         [self.navigationController pushViewController:instrucVC animated:YES];
     }];
-    
     navView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:navView];
+    
+    UIImageView *imv = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"mg_bgVV"]];
+    imv.frame = CGRectMake(0, 64, kWindowW, kWindowH - 190-64);
+    [self.view addSubview:imv];
     // Do any additional setup after loading the view.
 }
 

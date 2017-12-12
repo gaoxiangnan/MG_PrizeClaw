@@ -46,6 +46,7 @@
 		FEFCCCE31FDE8C0D004F26A5 /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCE21FDE8C0D004F26A5 /* MessageModel.m */; };
 		FEFCCCEA1FDFB44C004F26A5 /* GamePlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCE91FDFB44C004F26A5 /* GamePlayViewController.m */; };
 		FEFCCCED1FDFB524004F26A5 /* InstructionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCEC1FDFB524004F26A5 /* InstructionViewController.m */; };
+		FEFCCCF51FDFCC02004F26A5 /* HandleGameView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCF41FDFCC02004F26A5 /* HandleGameView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +147,8 @@
 		FEFCCCE91FDFB44C004F26A5 /* GamePlayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GamePlayViewController.m; sourceTree = "<group>"; };
 		FEFCCCEB1FDFB524004F26A5 /* InstructionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstructionViewController.h; sourceTree = "<group>"; };
 		FEFCCCEC1FDFB524004F26A5 /* InstructionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstructionViewController.m; sourceTree = "<group>"; };
+		FEFCCCF31FDFCC02004F26A5 /* HandleGameView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HandleGameView.h; sourceTree = "<group>"; };
+		FEFCCCF41FDFCC02004F26A5 /* HandleGameView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HandleGameView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -382,6 +385,8 @@
 			children = (
 				FEFCCCE81FDFB44C004F26A5 /* GamePlayViewController.h */,
 				FEFCCCE91FDFB44C004F26A5 /* GamePlayViewController.m */,
+				FEFCCCF31FDFCC02004F26A5 /* HandleGameView.h */,
+				FEFCCCF41FDFCC02004F26A5 /* HandleGameView.m */,
 				FEFCCCEB1FDFB524004F26A5 /* InstructionViewController.h */,
 				FEFCCCEC1FDFB524004F26A5 /* InstructionViewController.m */,
 			);
@@ -589,6 +594,7 @@
 				FEFCCC3D1FD7ED8D004F26A5 /* SDCollectionViewCell.m in Sources */,
 				FEFCCCE31FDE8C0D004F26A5 /* MessageModel.m in Sources */,
 				FEFCCCD01FDE5797004F26A5 /* MG_BaseViewController.m in Sources */,
+				FEFCCCF51FDFCC02004F26A5 /* HandleGameView.m in Sources */,
 				FEFCCC3A1FD7ED8D004F26A5 /* TAAnimatedDotView.m in Sources */,
 				FEFCCC3B1FD7ED8D004F26A5 /* TADotView.m in Sources */,
 				FEFCCCED1FDFB524004F26A5 /* InstructionViewController.m in Sources */,
