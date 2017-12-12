@@ -10,6 +10,7 @@
 #import "UIView+SDAutoLayout.h"
 #import "NavView.h"
 #import "RecordsViewController.h"
+#import "HomeCollectionViewCell.h"
 
 #define CollectViewCellW (kWindowW - 40)/2
 #define CollectViewCellH             195
