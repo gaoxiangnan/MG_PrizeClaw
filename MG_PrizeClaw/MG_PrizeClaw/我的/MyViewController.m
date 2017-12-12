@@ -68,7 +68,7 @@ static NSString * const reuseIdentifier = @"cell";
 -(UIImageView *)BackImg
 {
     if (!_BackImg) {
-        _BackImg = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"mg_backG"]];
+        _BackImg = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"边框"]];
         _BackImg.frame = self.view.frame;
     }
     return _BackImg;

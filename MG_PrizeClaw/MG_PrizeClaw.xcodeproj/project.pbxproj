@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A73DE8271FDFC49300FB6845 /* RechargeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A73DE8231FDFC49200FB6845 /* RechargeTableViewCell.m */; };
+		A73DE8281FDFC49300FB6845 /* RecordsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A73DE8261FDFC49300FB6845 /* RecordsViewController.m */; };
 		A7A1F6FF1FD6715A0076F7A3 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A1F6FE1FD6715A0076F7A3 /* HomeViewController.m */; };
 		C81D591E6BCBF6C47CC03030 /* libPods-MG_PrizeClaw.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1D777541CC6BF865A12444 /* libPods-MG_PrizeClaw.a */; };
 		FE617BA31FD53B2300D9FC86 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE617BA21FD53B2300D9FC86 /* AppDelegate.m */; };
@@ -42,7 +44,6 @@
 		FEFCCCDC1FDE884A004F26A5 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCDB1FDE884A004F26A5 /* MessageViewController.m */; };
 		FEFCCCDF1FDE8929004F26A5 /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCDE1FDE8929004F26A5 /* MessageTableViewCell.m */; };
 		FEFCCCE31FDE8C0D004F26A5 /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCE21FDE8C0D004F26A5 /* MessageModel.m */; };
-		FEFCCCE61FDFAAD0004F26A5 /* RecordsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCE51FDFAAD0004F26A5 /* RecordsViewController.m */; };
 		FEFCCCEA1FDFB44C004F26A5 /* GamePlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCE91FDFB44C004F26A5 /* GamePlayViewController.m */; };
 		FEFCCCED1FDFB524004F26A5 /* InstructionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCEC1FDFB524004F26A5 /* InstructionViewController.m */; };
 /* End PBXBuildFile section */
@@ -67,6 +68,10 @@
 /* Begin PBXFileReference section */
 		63745F092C230B9B62F3F0BD /* Pods-MG_PrizeClaw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MG_PrizeClaw.release.xcconfig"; path = "Pods/Target Support Files/Pods-MG_PrizeClaw/Pods-MG_PrizeClaw.release.xcconfig"; sourceTree = "<group>"; };
 		9F1D777541CC6BF865A12444 /* libPods-MG_PrizeClaw.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MG_PrizeClaw.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A73DE8231FDFC49200FB6845 /* RechargeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RechargeTableViewCell.m; sourceTree = "<group>"; };
+		A73DE8241FDFC49300FB6845 /* RechargeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RechargeTableViewCell.h; sourceTree = "<group>"; };
+		A73DE8251FDFC49300FB6845 /* RecordsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordsViewController.h; sourceTree = "<group>"; };
+		A73DE8261FDFC49300FB6845 /* RecordsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordsViewController.m; sourceTree = "<group>"; };
 		A7A1F6FD1FD6715A0076F7A3 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		A7A1F6FE1FD6715A0076F7A3 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		C06275ED6F8D3D9E775CA0BE /* Pods-MG_PrizeClaw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MG_PrizeClaw.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MG_PrizeClaw/Pods-MG_PrizeClaw.debug.xcconfig"; sourceTree = "<group>"; };
@@ -137,8 +142,6 @@
 		FEFCCCDE1FDE8929004F26A5 /* MessageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewCell.m; sourceTree = "<group>"; };
 		FEFCCCE11FDE8C0D004F26A5 /* MessageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageModel.h; sourceTree = "<group>"; };
 		FEFCCCE21FDE8C0D004F26A5 /* MessageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageModel.m; sourceTree = "<group>"; };
-		FEFCCCE41FDFAAD0004F26A5 /* RecordsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecordsViewController.h; sourceTree = "<group>"; };
-		FEFCCCE51FDFAAD0004F26A5 /* RecordsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecordsViewController.m; sourceTree = "<group>"; };
 		FEFCCCE81FDFB44C004F26A5 /* GamePlayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GamePlayViewController.h; sourceTree = "<group>"; };
 		FEFCCCE91FDFB44C004F26A5 /* GamePlayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GamePlayViewController.m; sourceTree = "<group>"; };
 		FEFCCCEB1FDFB524004F26A5 /* InstructionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstructionViewController.h; sourceTree = "<group>"; };
@@ -326,8 +329,10 @@
 				FEFCCC4C1FD926B8004F26A5 /* MyViewController.m */,
 				FEFCCC4D1FD926B8004F26A5 /* NavView.h */,
 				FEFCCC4E1FD926B8004F26A5 /* NavView.m */,
-				FEFCCCE41FDFAAD0004F26A5 /* RecordsViewController.h */,
-				FEFCCCE51FDFAAD0004F26A5 /* RecordsViewController.m */,
+				A73DE8241FDFC49300FB6845 /* RechargeTableViewCell.h */,
+				A73DE8231FDFC49200FB6845 /* RechargeTableViewCell.m */,
+				A73DE8251FDFC49300FB6845 /* RecordsViewController.h */,
+				A73DE8261FDFC49300FB6845 /* RecordsViewController.m */,
 			);
 			path = "我的";
 			sourceTree = "<group>";
@@ -579,8 +584,8 @@
 				FEFCCC421FD92094004F26A5 /* UIView+LSCore.m in Sources */,
 				FEFCCC9F1FD9544D004F26A5 /* SuspendButtonViewController.m in Sources */,
 				FEFCCCEA1FDFB44C004F26A5 /* GamePlayViewController.m in Sources */,
+				A73DE8281FDFC49300FB6845 /* RecordsViewController.m in Sources */,
 				FEFCCCC81FDE53C0004F26A5 /* FetchingRecordsCell.m in Sources */,
-				FEFCCCE61FDFAAD0004F26A5 /* RecordsViewController.m in Sources */,
 				FEFCCC3D1FD7ED8D004F26A5 /* SDCollectionViewCell.m in Sources */,
 				FEFCCCE31FDE8C0D004F26A5 /* MessageModel.m in Sources */,
 				FEFCCCD01FDE5797004F26A5 /* MG_BaseViewController.m in Sources */,
@@ -594,6 +599,7 @@
 				FEFCCCCD1FDE5726004F26A5 /* SettingViewController.m in Sources */,
 				FE617BB11FD53B2300D9FC86 /* main.m in Sources */,
 				FEFCCCD31FDE580F004F26A5 /* SettingAddressViewController.m in Sources */,
+				A73DE8271FDFC49300FB6845 /* RechargeTableViewCell.m in Sources */,
 				FEFCCCD91FDE7961004F26A5 /* EditAddressViewController.m in Sources */,
 				FEFCCC391FD7ED8D004F26A5 /* TAAbstractDotView.m in Sources */,
 				FEFCCC3F1FD7ED8D004F26A5 /* UIView+SDExtension.m in Sources */,
