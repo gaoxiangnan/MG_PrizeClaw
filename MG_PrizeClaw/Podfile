@@ -12,4 +12,5 @@ inhibit_all_warnings!
         pod 'MBProgressHUD'
         pod 'AMapLocation'
         pod 'AMapNavi'
+	pod 'WechatOpenSDK'
 end
