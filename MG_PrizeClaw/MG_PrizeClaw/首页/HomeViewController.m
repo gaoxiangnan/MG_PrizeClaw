@@ -13,6 +13,7 @@
 #import "SettingViewController.h"
 #import "FetchingRecordsController.h"
 #import "MyViewController.h"
+#import "RecordsViewController.h"
 
 
 
@@ -153,10 +154,8 @@ static NSString * const reuseIdentifier = @"cell";
 {
     [super suspendBtnClicked:sender];
     
-    UIViewController *aVC = [[UIViewController alloc] init];
-    aVC.view.backgroundColor = [UIColor whiteColor];
-    
-    [self.navigationController pushViewController:aVC animated:YES];
+    RecordsViewController *recoVC = [[RecordsViewController alloc]init];
+    [self.navigationController pushViewController:recoVC animated:YES];
 }
 
 /*
