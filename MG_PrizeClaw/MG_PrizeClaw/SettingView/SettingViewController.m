@@ -10,6 +10,7 @@
 #import "NavView.h"
 #import "SettingAddressViewController.h"
 #import "MessageViewController.h"
+#import "RecordsViewController.h"
 
 @interface SettingViewController ()
 {
@@ -262,7 +263,8 @@
 }
 - (void)onCZTapGes:(UITapGestureRecognizer *)ges
 {
-    
+    RecordsViewController *RecordVC = [[RecordsViewController alloc]init];
+    [self.navigationController pushViewController:RecordVC animated:YES];
 }
 - (void)onSHTapGes:(UITapGestureRecognizer *)ges
 {

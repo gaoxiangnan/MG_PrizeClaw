@@ -40,6 +40,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.Backimg];
+    NavView *navView = [[NavView alloc]initWithFrame:CGRectMake(0, 0, kWindowW, 64) titleImage:nil titleString:nil  leftButtonImg:[UIImage imageNamed:@"Backimg"] btnClick:^{
+        [self.navigationController popViewControllerAnimated:YES];
+    } rightButton:nil rightClick:^{
+        
+    }];
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake((self.view.frame.size.width-100)/2, 20, 100, 50)];
+    label.text = @"抓取记录";
+    label.font = [UIFont boldSystemFontOfSize:20.0f];
+    label.textColor = [UIColor blackColor];
+    [self.view addSubview:label];
+    [self.view addSubview:navView];
+    
+    
+    
+    
+    
     [self.view addSubview:self.tableView];
     
     self.tableView.delegate = self;
