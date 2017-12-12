@@ -23,7 +23,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        UIView *bgView = [[UIView alloc]initWithFrame:CGRectMake(20, 0, kWindowW - 40, 175)];
+        UIView *bgView = [[UIView alloc]initWithFrame:CGRectMake(20, 10, kWindowW - 40, 175)];
         bgView.backgroundColor = [UIColor redColor];
         [self addSubview:bgView];
         

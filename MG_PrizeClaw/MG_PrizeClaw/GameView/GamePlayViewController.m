@@ -8,11 +8,13 @@
 
 #import "GamePlayViewController.h"
 #import "InstructionViewController.h"
+#import "HandleGameView.h"
 
 @interface GamePlayViewController ()
 {
     NavView *navView;
 }
+@property (nonatomic, strong) UIButton *photoBtn;
 @end
 
 @implementation GamePlayViewController
@@ -29,11 +31,49 @@
     [self.view addSubview:navView];
     
     UIImageView *imv = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"mg_bgVV"]];
-    imv.frame = CGRectMake(0, 64, kWindowW, kWindowH - 190-64);
+//    imv.frame = CGRectMake(0, 64, kWindowW, kWindowH - 190-64);
     [self.view addSubview:imv];
+    [imv mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.view);
+        make.top.mas_equalTo(64);
+        make.width.mas_equalTo(self.view);
+        make.height.mas_equalTo(kWindowH - 190-64);
+    }];
+    
+    HandleGameView *handleVV = [[HandleGameView alloc]init];
+    [self.view addSubview:handleVV];
+    [handleVV mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.view);
+        make.top.mas_equalTo(imv.mas_bottom);
+        make.width.mas_equalTo(self.view);
+        make.height.mas_equalTo(190);
+    }];
+    
+    
+    
+    [self.view addSubview:self.photoBtn];
+    [_photoBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(self.view.mas_right);
+        make.bottom.mas_equalTo(handleVV.mas_top).mas_offset(-20);
+        make.width.mas_equalTo(62);
+        make.height.mas_equalTo(52);
+        
+    }];
     // Do any additional setup after loading the view.
 }
-
+- (UIButton *)photoBtn
+{
+    if (!_photoBtn) {
+        _photoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_photoBtn setBackgroundImage:[UIImage imageNamed:@"mg_game_photo"] forState:UIControlStateNormal];
+        [_photoBtn addTarget:self action:@selector(onGamePhotoClick) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _photoBtn;
+}
+- (void)onGamePhotoClick
+{
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

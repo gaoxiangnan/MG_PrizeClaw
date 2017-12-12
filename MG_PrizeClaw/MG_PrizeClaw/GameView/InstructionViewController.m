@@ -9,13 +9,22 @@
 #import "InstructionViewController.h"
 
 @interface InstructionViewController ()
-
+{
+    NavView *navView;
+}
 @end
 
 @implementation InstructionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    navView = [[NavView alloc]initWithFrame:CGRectMake(0, 0, kWindowW, 64) titleImage:[UIImage imageNamed:@"Nav"] titleString:nil leftButtonImg:nil btnClick:^{
+        [self.navigationController popViewControllerAnimated:YES];
+    } rightButton:nil rightClick:^{
+        
+    }];
+    navView.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:navView];
     // Do any additional setup after loading the view.
 }
 
