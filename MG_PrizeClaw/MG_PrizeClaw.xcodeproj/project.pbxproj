@@ -48,6 +48,7 @@
 		FEFCCCFE1FE0FC51004F26A5 /* MG_BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCFC1FE0FC51004F26A5 /* MG_BaseViewController.m */; };
 		FEFCCD041FE0FC58004F26A5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCD031FE0FC58004F26A5 /* ViewController.m */; };
 		FEFCCD081FE0FD0F004F26A5 /* CH_NetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCD071FE0FD0F004F26A5 /* CH_NetWorkManager.m */; };
+		FEFCCD0C1FE1026E004F26A5 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCD0B1FE1026E004F26A5 /* UserInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +153,8 @@
 		FEFCCD031FE0FC58004F26A5 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FEFCCD061FE0FD0F004F26A5 /* CH_NetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CH_NetWorkManager.h; sourceTree = "<group>"; };
 		FEFCCD071FE0FD0F004F26A5 /* CH_NetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CH_NetWorkManager.m; sourceTree = "<group>"; };
+		FEFCCD0A1FE1026E004F26A5 /* UserInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
+		FEFCCD0B1FE1026E004F26A5 /* UserInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -409,6 +412,8 @@
 				FEFCCD011FE0FC58004F26A5 /* MG_PrizeClawCommon.h */,
 				FEFCCD021FE0FC58004F26A5 /* ViewController.h */,
 				FEFCCD031FE0FC58004F26A5 /* ViewController.m */,
+				FEFCCD0A1FE1026E004F26A5 /* UserInfo.h */,
+				FEFCCD0B1FE1026E004F26A5 /* UserInfo.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -628,6 +633,7 @@
 				FEFCCC3B1FD7ED8D004F26A5 /* TADotView.m in Sources */,
 				FEFCCCED1FDFB524004F26A5 /* InstructionViewController.m in Sources */,
 				FEFCCC111FD7CEA1004F26A5 /* HomeCollectHeaderView.m in Sources */,
+				FEFCCD0C1FE1026E004F26A5 /* UserInfo.m in Sources */,
 				FEFCCCDF1FDE8929004F26A5 /* MessageTableViewCell.m in Sources */,
 				FEFCCC451FD92388004F26A5 /* UIView+additional.m in Sources */,
 				FEFCCCCD1FDE5726004F26A5 /* SettingViewController.m in Sources */,

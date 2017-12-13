@@ -11,6 +11,7 @@
 #import "HomeViewController.h"
 #import "WXApi.h"
 #import "AppDelegate.h"
+#import "UserInfo.h"
 
 #define URL_APPID @"wx3d1fb361ee5ee0e2"
 #define URL_SECRET @"e289b23e9aa762131cb46b2fb28e8f0e"
@@ -103,7 +104,8 @@
 
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
         NSLog(@"dic %@",dic);
-
+        [UserInfo shareInstance].userToken = dic[@"access_token"];
+        [UserInfo shareInstance].userToken = dic[@"refresh_token"];
         /*
          access_token   接口调用凭证
          expires_in access_token接口调用凭证超时时间，单位（秒）
@@ -119,14 +121,7 @@
         NSLog(@"error %@",error.localizedFailureReason);
     }];
     
-//    [CH_NetWorkManager getWithAllURLString:@"https://api.weixin.qq.com/sns/oauth2/access_token" parameters:@{@"appid":URL_APPID,@"secret":URL_SECRET,@"code":code} success:^(NSDictionary *data) {
-//        NSLog(@"dic %@",data);
-//        NSString* accessToken=[data valueForKey:@"access_token"];
-//        NSString* openID=[data valueForKey:@"openid"];
-//        [weakSelf requestUserInfoByToken:accessToken andOpenid:openID];
-//    } failure:^(NSError *error) {
-//
-//    }];
+
     
 }
 
@@ -141,6 +136,17 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
         NSLog(@"dic  ==== %@",dic);
+        
+        [UserInfo shareInstance].isLogined = YES;
+        
+        
+        [UserInfo shareInstance].userName = dic[@"nickname"];
+        [UserInfo shareInstance].openID = dic[@"openid"];        
+        [UserInfo shareInstance].userImage = dic[@"headimgurl"];
+        if (dic[@"openid"]) {
+            HomeViewController *vc = [HomeViewController new];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"error %ld",(long)error.code);
