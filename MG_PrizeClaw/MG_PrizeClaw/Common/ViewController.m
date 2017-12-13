@@ -98,12 +98,12 @@
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"application/json", @"text/json",@"text/plain",  nil];
     //通过 appid  secret 认证code . 来发送获取 access_token的请求
     [manager GET:[NSString stringWithFormat:@"https://api.weixin.qq.com/sns/oauth2/access_token?appid=%@&secret=%@&code=%@&grant_type=authorization_code",URL_APPID,URL_SECRET,code] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-        
+
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {  //获得access_token，然后根据access_token获取用户信息请求。
-        
+
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
         NSLog(@"dic %@",dic);
-        
+
         /*
          access_token   接口调用凭证
          expires_in access_token接口调用凭证超时时间，单位（秒）
@@ -118,6 +118,15 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"error %@",error.localizedFailureReason);
     }];
+    
+//    [CH_NetWorkManager getWithAllURLString:@"https://api.weixin.qq.com/sns/oauth2/access_token" parameters:@{@"appid":URL_APPID,@"secret":URL_SECRET,@"code":code} success:^(NSDictionary *data) {
+//        NSLog(@"dic %@",data);
+//        NSString* accessToken=[data valueForKey:@"access_token"];
+//        NSString* openID=[data valueForKey:@"openid"];
+//        [weakSelf requestUserInfoByToken:accessToken andOpenid:openID];
+//    } failure:^(NSError *error) {
+//
+//    }];
     
 }
 

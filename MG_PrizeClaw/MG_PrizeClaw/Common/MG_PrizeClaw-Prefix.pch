@@ -16,7 +16,7 @@
 #import <Masonry.h>
 #import <MapKit/MapKit.h>
 #import "UIView+SDAutoLayout.h"
-//#import "CH_NetWorkManager.h"
+#import "CH_NetWorkManager.h"
 //#import "NSString+Option.h"
 #import <SDWebImageManager.h>
 #import "MG_BaseViewController.h"

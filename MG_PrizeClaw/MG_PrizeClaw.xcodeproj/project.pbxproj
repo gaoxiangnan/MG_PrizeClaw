@@ -47,6 +47,7 @@
 		FEFCCCFD1FE0FC51004F26A5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCFA1FE0FC51004F26A5 /* AppDelegate.m */; };
 		FEFCCCFE1FE0FC51004F26A5 /* MG_BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCFC1FE0FC51004F26A5 /* MG_BaseViewController.m */; };
 		FEFCCD041FE0FC58004F26A5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCD031FE0FC58004F26A5 /* ViewController.m */; };
+		FEFCCD081FE0FD0F004F26A5 /* CH_NetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCD071FE0FD0F004F26A5 /* CH_NetWorkManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +150,8 @@
 		FEFCCD011FE0FC58004F26A5 /* MG_PrizeClawCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MG_PrizeClawCommon.h; sourceTree = "<group>"; };
 		FEFCCD021FE0FC58004F26A5 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		FEFCCD031FE0FC58004F26A5 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FEFCCD061FE0FD0F004F26A5 /* CH_NetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CH_NetWorkManager.h; sourceTree = "<group>"; };
+		FEFCCD071FE0FD0F004F26A5 /* CH_NetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CH_NetWorkManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +235,7 @@
 		FE617BA01FD53B2300D9FC86 /* MG_PrizeClaw */ = {
 			isa = PBXGroup;
 			children = (
+				FEFCCD051FE0FCFF004F26A5 /* NetWork */,
 				FEFCCCFF1FE0FC58004F26A5 /* Common */,
 				FEFCCCF81FE0FC51004F26A5 /* Base */,
 				FEFCCCE71FDFB3DA004F26A5 /* GameView */,
@@ -407,6 +411,15 @@
 				FEFCCD031FE0FC58004F26A5 /* ViewController.m */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		FEFCCD051FE0FCFF004F26A5 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				FEFCCD061FE0FD0F004F26A5 /* CH_NetWorkManager.h */,
+				FEFCCD071FE0FD0F004F26A5 /* CH_NetWorkManager.m */,
+			);
+			path = NetWork;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -607,6 +620,7 @@
 				FEFCCCEA1FDFB44C004F26A5 /* GamePlayViewController.m in Sources */,
 				A73DE8281FDFC49300FB6845 /* RecordsViewController.m in Sources */,
 				FEFCCCC81FDE53C0004F26A5 /* FetchingRecordsCell.m in Sources */,
+				FEFCCD081FE0FD0F004F26A5 /* CH_NetWorkManager.m in Sources */,
 				FEFCCC3D1FD7ED8D004F26A5 /* SDCollectionViewCell.m in Sources */,
 				FEFCCCE31FDE8C0D004F26A5 /* MessageModel.m in Sources */,
 				FEFCCCF51FDFCC02004F26A5 /* HandleGameView.m in Sources */,
