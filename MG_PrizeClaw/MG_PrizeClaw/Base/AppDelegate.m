@@ -28,7 +28,33 @@
     return YES;
 }
 
-
+-(void) onResp:(BaseResp*)resp{
+    NSLog(@"resp %d",resp.errCode);
+    
+    /*
+     enum  WXErrCode {
+     WXSuccess           = 0,    成功
+     WXErrCodeCommon     = -1,  普通错误类型
+     WXErrCodeUserCancel = -2,    用户点击取消并返回
+     WXErrCodeSentFail   = -3,   发送失败
+     WXErrCodeAuthDeny   = -4,    授权失败
+     WXErrCodeUnsupport  = -5,   微信不支持
+     };
+     */
+    if ([resp isKindOfClass:[SendAuthResp class]]) {   //授权登录的类。
+        if (resp.errCode == 0) {  //成功。
+            //这里处理回调的方法 。 通过代理吧对应的登录消息传送过去。
+            if ([_wxDelegate respondsToSelector:@selector(loginSuccessByCode:)]) {
+                SendAuthResp *resp2 = (SendAuthResp *)resp;
+                [_wxDelegate loginSuccessByCode:resp2.code];
+            }
+        }else{ //失败
+            NSLog(@"error %@",resp.errStr);
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"登录失败" message:[NSString stringWithFormat:@"reason : %@",resp.errStr] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+            [alert show];
+        }
+    }
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

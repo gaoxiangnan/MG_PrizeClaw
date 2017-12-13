@@ -11,8 +11,6 @@
 		A73DE8281FDFC49300FB6845 /* RecordsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A73DE8261FDFC49300FB6845 /* RecordsViewController.m */; };
 		A7A1F6FF1FD6715A0076F7A3 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A1F6FE1FD6715A0076F7A3 /* HomeViewController.m */; };
 		C81D591E6BCBF6C47CC03030 /* libPods-MG_PrizeClaw.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1D777541CC6BF865A12444 /* libPods-MG_PrizeClaw.a */; };
-		FE617BA31FD53B2300D9FC86 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE617BA21FD53B2300D9FC86 /* AppDelegate.m */; };
-		FE617BA61FD53B2300D9FC86 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE617BA51FD53B2300D9FC86 /* ViewController.m */; };
 		FE617BA91FD53B2300D9FC86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE617BA71FD53B2300D9FC86 /* Main.storyboard */; };
 		FE617BAB1FD53B2300D9FC86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE617BAA1FD53B2300D9FC86 /* Assets.xcassets */; };
 		FE617BAE1FD53B2300D9FC86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE617BAC1FD53B2300D9FC86 /* LaunchScreen.storyboard */; };
@@ -37,7 +35,6 @@
 		FEFCCCC81FDE53C0004F26A5 /* FetchingRecordsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCC51FDE53C0004F26A5 /* FetchingRecordsCell.m */; };
 		FEFCCCC91FDE53C0004F26A5 /* FetchingRecordsController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCC71FDE53C0004F26A5 /* FetchingRecordsController.m */; };
 		FEFCCCCD1FDE5726004F26A5 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCCC1FDE5726004F26A5 /* SettingViewController.m */; };
-		FEFCCCD01FDE5797004F26A5 /* MG_BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCCF1FDE5797004F26A5 /* MG_BaseViewController.m */; };
 		FEFCCCD31FDE580F004F26A5 /* SettingAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCD21FDE580F004F26A5 /* SettingAddressViewController.m */; };
 		FEFCCCD61FDE582A004F26A5 /* AddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCD51FDE582A004F26A5 /* AddressTableViewCell.m */; };
 		FEFCCCD91FDE7961004F26A5 /* EditAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCD81FDE7961004F26A5 /* EditAddressViewController.m */; };
@@ -47,6 +44,9 @@
 		FEFCCCEA1FDFB44C004F26A5 /* GamePlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCE91FDFB44C004F26A5 /* GamePlayViewController.m */; };
 		FEFCCCED1FDFB524004F26A5 /* InstructionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCEC1FDFB524004F26A5 /* InstructionViewController.m */; };
 		FEFCCCF51FDFCC02004F26A5 /* HandleGameView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCF41FDFCC02004F26A5 /* HandleGameView.m */; };
+		FEFCCCFD1FE0FC51004F26A5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCFA1FE0FC51004F26A5 /* AppDelegate.m */; };
+		FEFCCCFE1FE0FC51004F26A5 /* MG_BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCCFC1FE0FC51004F26A5 /* MG_BaseViewController.m */; };
+		FEFCCD041FE0FC58004F26A5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFCCD031FE0FC58004F26A5 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,10 +77,6 @@
 		A7A1F6FE1FD6715A0076F7A3 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		C06275ED6F8D3D9E775CA0BE /* Pods-MG_PrizeClaw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MG_PrizeClaw.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MG_PrizeClaw/Pods-MG_PrizeClaw.debug.xcconfig"; sourceTree = "<group>"; };
 		FE617B9E1FD53B2300D9FC86 /* MG_PrizeClaw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MG_PrizeClaw.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE617BA11FD53B2300D9FC86 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		FE617BA21FD53B2300D9FC86 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FE617BA41FD53B2300D9FC86 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FE617BA51FD53B2300D9FC86 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FE617BA81FD53B2300D9FC86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FE617BAA1FD53B2300D9FC86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE617BAD1FD53B2300D9FC86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -92,10 +88,8 @@
 		FE617BC11FD53B2300D9FC86 /* MG_PrizeClawUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MG_PrizeClawUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE617BC51FD53B2300D9FC86 /* MG_PrizeClawUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MG_PrizeClawUITests.m; sourceTree = "<group>"; };
 		FE617BC71FD53B2300D9FC86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FE617BD31FD53BFD00D9FC86 /* MG_PrizeClaw-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MG_PrizeClaw-Prefix.pch"; sourceTree = "<group>"; };
 		FEFCCC0B1FD7C134004F26A5 /* HomeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeCollectionViewCell.h; sourceTree = "<group>"; };
 		FEFCCC0C1FD7C134004F26A5 /* HomeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionViewCell.m; sourceTree = "<group>"; };
-		FEFCCC0E1FD7C445004F26A5 /* MG_PrizeClawCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MG_PrizeClawCommon.h; sourceTree = "<group>"; };
 		FEFCCC0F1FD7CEA1004F26A5 /* HomeCollectHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeCollectHeaderView.h; sourceTree = "<group>"; };
 		FEFCCC101FD7CEA1004F26A5 /* HomeCollectHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeCollectHeaderView.m; sourceTree = "<group>"; };
 		FEFCCC2B1FD7ED8D004F26A5 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
@@ -129,8 +123,6 @@
 		FEFCCCC71FDE53C0004F26A5 /* FetchingRecordsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchingRecordsController.m; sourceTree = "<group>"; };
 		FEFCCCCB1FDE5726004F26A5 /* SettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		FEFCCCCC1FDE5726004F26A5 /* SettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
-		FEFCCCCE1FDE5797004F26A5 /* MG_BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MG_BaseViewController.h; sourceTree = "<group>"; };
-		FEFCCCCF1FDE5797004F26A5 /* MG_BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MG_BaseViewController.m; sourceTree = "<group>"; };
 		FEFCCCD11FDE580F004F26A5 /* SettingAddressViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingAddressViewController.h; sourceTree = "<group>"; };
 		FEFCCCD21FDE580F004F26A5 /* SettingAddressViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingAddressViewController.m; sourceTree = "<group>"; };
 		FEFCCCD41FDE582A004F26A5 /* AddressTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressTableViewCell.h; sourceTree = "<group>"; };
@@ -149,6 +141,14 @@
 		FEFCCCEC1FDFB524004F26A5 /* InstructionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstructionViewController.m; sourceTree = "<group>"; };
 		FEFCCCF31FDFCC02004F26A5 /* HandleGameView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HandleGameView.h; sourceTree = "<group>"; };
 		FEFCCCF41FDFCC02004F26A5 /* HandleGameView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HandleGameView.m; sourceTree = "<group>"; };
+		FEFCCCF91FE0FC51004F26A5 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FEFCCCFA1FE0FC51004F26A5 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FEFCCCFB1FE0FC51004F26A5 /* MG_BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MG_BaseViewController.h; sourceTree = "<group>"; };
+		FEFCCCFC1FE0FC51004F26A5 /* MG_BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MG_BaseViewController.m; sourceTree = "<group>"; };
+		FEFCCD001FE0FC58004F26A5 /* MG_PrizeClaw-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MG_PrizeClaw-Prefix.pch"; sourceTree = "<group>"; };
+		FEFCCD011FE0FC58004F26A5 /* MG_PrizeClawCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MG_PrizeClawCommon.h; sourceTree = "<group>"; };
+		FEFCCD021FE0FC58004F26A5 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FEFCCD031FE0FC58004F26A5 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,25 +232,19 @@
 		FE617BA01FD53B2300D9FC86 /* MG_PrizeClaw */ = {
 			isa = PBXGroup;
 			children = (
+				FEFCCCFF1FE0FC58004F26A5 /* Common */,
+				FEFCCCF81FE0FC51004F26A5 /* Base */,
 				FEFCCCE71FDFB3DA004F26A5 /* GameView */,
 				FEFCCCCA1FDE570F004F26A5 /* SettingView */,
 				FEFCCCC31FDE53C0004F26A5 /* Fetching records */,
 				FEFCCC481FD926B8004F26A5 /* 我的 */,
 				FEFCCC071FD7BB60004F26A5 /* OpenSource */,
-				FE617BA11FD53B2300D9FC86 /* AppDelegate.h */,
-				FE617BA21FD53B2300D9FC86 /* AppDelegate.m */,
-				FE617BA41FD53B2300D9FC86 /* ViewController.h */,
-				FE617BA51FD53B2300D9FC86 /* ViewController.m */,
-				FEFCCCCE1FDE5797004F26A5 /* MG_BaseViewController.h */,
-				FEFCCCCF1FDE5797004F26A5 /* MG_BaseViewController.m */,
 				A7A1F7001FD671630076F7A3 /* 首页 */,
 				FE617BA71FD53B2300D9FC86 /* Main.storyboard */,
 				FE617BAA1FD53B2300D9FC86 /* Assets.xcassets */,
 				FE617BAC1FD53B2300D9FC86 /* LaunchScreen.storyboard */,
 				FE617BAF1FD53B2300D9FC86 /* Info.plist */,
 				FE617BB01FD53B2300D9FC86 /* main.m */,
-				FE617BD31FD53BFD00D9FC86 /* MG_PrizeClaw-Prefix.pch */,
-				FEFCCC0E1FD7C445004F26A5 /* MG_PrizeClawCommon.h */,
 			);
 			path = MG_PrizeClaw;
 			sourceTree = "<group>";
@@ -391,6 +385,28 @@
 				FEFCCCEC1FDFB524004F26A5 /* InstructionViewController.m */,
 			);
 			path = GameView;
+			sourceTree = "<group>";
+		};
+		FEFCCCF81FE0FC51004F26A5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FEFCCCF91FE0FC51004F26A5 /* AppDelegate.h */,
+				FEFCCCFA1FE0FC51004F26A5 /* AppDelegate.m */,
+				FEFCCCFB1FE0FC51004F26A5 /* MG_BaseViewController.h */,
+				FEFCCCFC1FE0FC51004F26A5 /* MG_BaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		FEFCCCFF1FE0FC58004F26A5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FEFCCD001FE0FC58004F26A5 /* MG_PrizeClaw-Prefix.pch */,
+				FEFCCD011FE0FC58004F26A5 /* MG_PrizeClawCommon.h */,
+				FEFCCD021FE0FC58004F26A5 /* ViewController.h */,
+				FEFCCD031FE0FC58004F26A5 /* ViewController.m */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -593,12 +609,10 @@
 				FEFCCCC81FDE53C0004F26A5 /* FetchingRecordsCell.m in Sources */,
 				FEFCCC3D1FD7ED8D004F26A5 /* SDCollectionViewCell.m in Sources */,
 				FEFCCCE31FDE8C0D004F26A5 /* MessageModel.m in Sources */,
-				FEFCCCD01FDE5797004F26A5 /* MG_BaseViewController.m in Sources */,
 				FEFCCCF51FDFCC02004F26A5 /* HandleGameView.m in Sources */,
 				FEFCCC3A1FD7ED8D004F26A5 /* TAAnimatedDotView.m in Sources */,
 				FEFCCC3B1FD7ED8D004F26A5 /* TADotView.m in Sources */,
 				FEFCCCED1FDFB524004F26A5 /* InstructionViewController.m in Sources */,
-				FE617BA61FD53B2300D9FC86 /* ViewController.m in Sources */,
 				FEFCCC111FD7CEA1004F26A5 /* HomeCollectHeaderView.m in Sources */,
 				FEFCCCDF1FDE8929004F26A5 /* MessageTableViewCell.m in Sources */,
 				FEFCCC451FD92388004F26A5 /* UIView+additional.m in Sources */,
@@ -610,15 +624,17 @@
 				FEFCCC391FD7ED8D004F26A5 /* TAAbstractDotView.m in Sources */,
 				FEFCCC3F1FD7ED8D004F26A5 /* UIView+SDExtension.m in Sources */,
 				FEFCCC3E1FD7ED8D004F26A5 /* SDCycleScrollView.m in Sources */,
-				FE617BA31FD53B2300D9FC86 /* AppDelegate.m in Sources */,
 				FEFCCC501FD926B8004F26A5 /* MyViewController.m in Sources */,
+				FEFCCCFD1FE0FC51004F26A5 /* AppDelegate.m in Sources */,
 				FEFCCCD61FDE582A004F26A5 /* AddressTableViewCell.m in Sources */,
 				FEFCCC3C1FD7ED8D004F26A5 /* TAPageControl.m in Sources */,
 				FEFCCC511FD926B8004F26A5 /* NavView.m in Sources */,
+				FEFCCD041FE0FC58004F26A5 /* ViewController.m in Sources */,
 				A7A1F6FF1FD6715A0076F7A3 /* HomeViewController.m in Sources */,
 				FEFCCCDC1FDE884A004F26A5 /* MessageViewController.m in Sources */,
 				FEFCCCC91FDE53C0004F26A5 /* FetchingRecordsController.m in Sources */,
 				FEFCCC0D1FD7C134004F26A5 /* HomeCollectionViewCell.m in Sources */,
+				FEFCCCFE1FE0FC51004F26A5 /* MG_BaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -789,7 +805,7 @@
 					"$(PROJECT_DIR)/MG_PrizeClaw/OpenSource/iphoneos_simulator",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MG_PrizeClaw/MG_PrizeClaw-Prefix.pch";
+				GCC_PREFIX_HEADER = "MG_PrizeClaw/Common/MG_PrizeClaw-Prefix.pch";
 				INFOPLIST_FILE = MG_PrizeClaw/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -811,7 +827,7 @@
 					"$(PROJECT_DIR)/MG_PrizeClaw/OpenSource/iphoneos_simulator",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MG_PrizeClaw/MG_PrizeClaw-Prefix.pch";
+				GCC_PREFIX_HEADER = "MG_PrizeClaw/Common/MG_PrizeClaw-Prefix.pch";
 				INFOPLIST_FILE = MG_PrizeClaw/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
