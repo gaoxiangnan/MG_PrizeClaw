@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-typedef void (^SuccessBlock)(NSDictionary *data);
+typedef void (^SuccessBlock)(NSDictionary *data,NSInteger code);
 typedef void (^FailureBlock)(NSError *error);
 @interface CH_NetWorkManager : NSObject
 

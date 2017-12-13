@@ -144,12 +144,32 @@
         [UserInfo shareInstance].openID = dic[@"openid"];        
         [UserInfo shareInstance].userImage = dic[@"headimgurl"];
         if (dic[@"openid"]) {
-            HomeViewController *vc = [HomeViewController new];
-            [self.navigationController pushViewController:vc animated:YES];
+            
+            [self loginPrizeClaw];
         }
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"error %ld",(long)error.code);
+    }];
+}
+- (void)loginPrizeClaw
+{
+    [CH_NetWorkManager postWithURLString:@"Login/login" parameters:@{@"name":[UserInfo shareInstance].userName,@"pic":[UserInfo shareInstance].userImage,@"open_id":[UserInfo shareInstance].openID,@"push_id":@"111"} success:^(NSDictionary *data,NSInteger code) {
+        if (code == 200) {
+            [UserInfo shareInstance].userToken = [data objectForKey:@"data"];
+            if (self.navigationController) {
+                HomeViewController *vc = [HomeViewController new];
+                [self.navigationController pushViewController:vc animated:YES];
+            }else{
+                [self dismissViewControllerAnimated:YES completion:nil];
+            }
+            
+        }else{
+            [self setAlertController:[data objectForKey:@"message"] ];
+        }
+        
+    } failure:^(NSError *error) {
+        
     }];
 }
 #pragma mark - 设置弹出提示语
@@ -160,7 +180,13 @@
     [alert addAction:actionConfirm];
     [self presentViewController:alert animated:YES completion:nil];
 }
-
+- (void)setAlertController:(NSString *)showStr {
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"温馨提示" message:showStr preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *actionConfirm = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
+    [alert addAction:actionConfirm];
+    [self presentViewController:alert animated:YES completion:nil];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

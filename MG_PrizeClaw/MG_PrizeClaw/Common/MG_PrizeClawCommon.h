@@ -11,7 +11,7 @@
 
 
 #endif /* MG_PrizeClawCommon_h */
-#define BaseURL @"http://jdsc.agr666.com"
+#define BaseURL @"http://wa.machenghome.top/app"
 #define Token [[NSUserDefaults standardUserDefaults] objectForKey:@"token"]
 
 //通过RGB设置颜色

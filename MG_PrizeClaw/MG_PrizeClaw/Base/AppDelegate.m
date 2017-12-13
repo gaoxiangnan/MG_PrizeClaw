@@ -8,7 +8,8 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-@interface AppDelegate ()
+
+@interface AppDelegate ()<UIAlertViewDelegate>
 
 @end
 
@@ -18,7 +19,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [WXApi registerApp:@"wx3d1fb361ee5ee0e2"];
-    
+    if ([UserInfo shareInstance].isLogined) {
+        
+    }
     ViewController *vc = [[ViewController alloc]init];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
     
@@ -67,11 +70,36 @@
 }
 
 
-- (void)applicationWillEnterForeground:(UIApplication *)application {
+- (void)applicationWillEnterForeground:(UIApplication *)application {//从后台唤醒
+    NPrintLog(@"我醒了");
+    [self loginPrizeClaw];
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
 }
-
-
+- (void)loginPrizeClaw
+{
+    [CH_NetWorkManager postWithURLString:@"Login/check_token" parameters:@{@"token":[UserInfo shareInstance].userToken} success:^(NSDictionary *data,NSInteger code) {
+        if (code == 200) {
+            [UserInfo shareInstance].userToken = [data objectForKey:@"data"];
+            
+        }else if(code == 102){
+            [self setAlertController:[data objectForKey:@"message"] ];
+        }
+        
+    } failure:^(NSError *error) {
+        
+    }];
+}
+- (void)setAlertController:(NSString *)showStr {
+    
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"温馨提示" message:showStr delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    [alert show];
+}
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    ViewController *vc = [[ViewController alloc]init];
+    [self.window.rootViewController presentViewController:vc animated:YES completion:nil];
+    [self.window.rootViewController.navigationController pushViewController:vc animated:YES];
+}
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
