@@ -782,7 +782,7 @@
 			baseConfigurationReference = C06275ED6F8D3D9E775CA0BE /* Pods-MG_PrizeClaw.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EL7N728QN5;
+				DEVELOPMENT_TEAM = RZ5J5JA7YJ;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -793,7 +793,7 @@
 				INFOPLIST_FILE = MG_PrizeClaw/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "ViewLayer.MG-PrizeClaw";
+				PRODUCT_BUNDLE_IDENTIFIER = com.migan.prizeClaw;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -804,7 +804,7 @@
 			baseConfigurationReference = 63745F092C230B9B62F3F0BD /* Pods-MG_PrizeClaw.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EL7N728QN5;
+				DEVELOPMENT_TEAM = RZ5J5JA7YJ;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -815,7 +815,7 @@
 				INFOPLIST_FILE = MG_PrizeClaw/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "ViewLayer.MG-PrizeClaw";
+				PRODUCT_BUNDLE_IDENTIFIER = com.migan.prizeClaw;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "UIView+SDAutoLayout.h"
 #import "HomeViewController.h"
+#import "WXApi.h"
 @interface ViewController ()
 @property(nonatomic,strong)UIImageView *BackImg,*ClawImg,*HDImg;
 @property(nonatomic,strong)UIButton  *WXbtn;
@@ -57,11 +58,31 @@
 }
 -(void)WXbtnAction:(id)sender
 {
-    NSLog(@"微信登录");
-    HomeViewController *vc = [HomeViewController new];
-    [self.navigationController pushViewController:vc animated:YES];
+//    NSLog(@"微信登录");
+//    HomeViewController *vc = [HomeViewController new];
+//    [self.navigationController pushViewController:vc animated:YES];
+
+    if ([WXApi isWXAppInstalled]) {
+        SendAuthReq *req = [[SendAuthReq alloc] init];
+        req.scope = @"snsapi_userinfo";
+        req.state = @"123";
+        [WXApi sendReq:req];
+    }
+    else {
+        [self setupAlertController];
+    }
+    
     
 }
+#pragma mark - 设置弹出提示语
+- (void)setupAlertController {
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"请先安装微信客户端" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *actionConfirm = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
+    [alert addAction:actionConfirm];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
