@@ -44,8 +44,8 @@
     if ([[NSUserDefaults standardUserDefaults] objectForKey:kUserName] != nil) {
         self.userName = [[NSUserDefaults standardUserDefaults] objectForKey:kUserName];
     }
-    if ([[NSUserDefaults standardUserDefaults] objectForKey:kUserId] != nil) {
-        self.openID = [[NSUserDefaults standardUserDefaults] objectForKey:kUserId];
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:kOpenid] != nil) {
+        self.openID = [[NSUserDefaults standardUserDefaults] objectForKey:kOpenid];
     }
     if ([[NSUserDefaults standardUserDefaults] objectForKey:kUserImage] != nil) {
         self.userImage = [[NSUserDefaults standardUserDefaults] objectForKey:kUserImage];
@@ -60,5 +60,18 @@
         self.userToken = [[NSUserDefaults standardUserDefaults] objectForKey:kUserToken];
         self.isLogined = YES;
     }
+}
++ (void)saveUserName
+{
+    [[NSUserDefaults standardUserDefaults] setObject:[UserInfo shareInstance].userName forKey:kUserName];
+    [[NSUserDefaults standardUserDefaults] setObject:[UserInfo shareInstance].userImage forKey:kUserImage];
+    [[NSUserDefaults standardUserDefaults] setObject:[UserInfo shareInstance].accessToken forKey:accessToken];
+    [[NSUserDefaults standardUserDefaults] setObject:[UserInfo shareInstance].openID forKey:kOpenid];
+    [[NSUserDefaults standardUserDefaults] setObject:[UserInfo shareInstance].userToken forKey:kUserToken];
+    
+    [[NSUserDefaults standardUserDefaults] setObject:[UserInfo shareInstance].refreshToken forKey:refreshToken];
+    
+    
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 @end

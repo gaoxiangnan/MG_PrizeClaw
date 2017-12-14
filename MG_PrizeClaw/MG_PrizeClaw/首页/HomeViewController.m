@@ -41,8 +41,7 @@ static NSString * const reuseIdentifier = @"cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-//    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    self.navigationController.navigationBarHidden = YES;
     
     UIImageView *bgImV = [[UIImageView alloc]initWithFrame:self.view.bounds];
     bgImV.image = [UIImage imageNamed:@"mg_backG"];

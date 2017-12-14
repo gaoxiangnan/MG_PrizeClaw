@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 static NSString* const kUserName = @"nickname";
 static NSString* const kOpenid = @"openid";
-static NSString* const kUserId = @"userId";
 static NSString* const kUserToken = @"user_token";
 static NSString* const accessToken = @"access_token";
 static NSString* const refreshToken = @"refresh_token";
@@ -27,4 +26,5 @@ static NSString* const kUserImage = @"headimgurl";
 @property(nonatomic,strong)NSString *userImage;//头像
 
 + (UserInfo *)shareInstance;
++ (void)saveUserName;
 @end

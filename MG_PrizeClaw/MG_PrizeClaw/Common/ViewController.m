@@ -28,7 +28,18 @@
 @implementation ViewController
 
 
-
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.navigationController.navigationBarHidden = YES;
+    [self.view addSubview:self.BackImg];
+    [self.view addSubview:self.ClawImg];
+    [self.view addSubview:self.HDImg];
+    [self.view addSubview:self.WXbtn];
+    
+    
+    
+    [self adpa];
+}
 
 -(UIImageView *)BackImg
 {
@@ -67,10 +78,32 @@
 }
 -(void)WXbtnAction:(id)sender
 {
-//    NSLog(@"微信登录");
-//    HomeViewController *vc = [HomeViewController new];
-//    [self.navigationController pushViewController:vc animated:YES];
-
+    NPrintLog(@"%@",[UserInfo shareInstance].accessToken);
+    if ([UserInfo shareInstance].accessToken.length > 0) {
+        [self catAccessToken];
+    }else{
+        [self catRefreshToken];
+    }
+   
+}
+-(void)catAccessToken
+{
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [manager GET:[NSString stringWithFormat:@"https://api.weixin.qq.com/sns/userinfo?access_token=%@&openid=%@",[UserInfo shareInstance].accessToken,[UserInfo shareInstance].openID] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        NSDictionary *dic = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        [self loginPrizeClaw];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"error %ld",(long)error.code);
+        [self catRefreshToken];
+    }];
+}
+-(void)catRefreshToken
+{
     if ([WXApi isWXAppInstalled]) {
         SendAuthReq *req = [[SendAuthReq alloc]init];
         req.scope = @"snsapi_userinfo";
@@ -84,13 +117,10 @@
     else {
         [self setupAlertController];
     }
-    
-    
 }
 
 #pragma mark 微信登录回调。
 -(void)loginSuccessByCode:(NSString *)code{
-    NSLog(@"code %@",code);
     __weak typeof(*&self) weakSelf = self;
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -104,8 +134,9 @@
 
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
         NSLog(@"dic %@",dic);
-        [UserInfo shareInstance].userToken = dic[@"access_token"];
-        [UserInfo shareInstance].userToken = dic[@"refresh_token"];
+        [UserInfo shareInstance].accessToken = dic[@"access_token"];
+        [UserInfo shareInstance].refreshToken = dic[@"refresh_token"];
+        [UserInfo saveUserName];
         /*
          access_token   接口调用凭证
          expires_in access_token接口调用凭证超时时间，单位（秒）
@@ -136,13 +167,11 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
         NSLog(@"dic  ==== %@",dic);
-        
-        [UserInfo shareInstance].isLogined = YES;
-        
-        
+    
         [UserInfo shareInstance].userName = dic[@"nickname"];
         [UserInfo shareInstance].openID = dic[@"openid"];        
         [UserInfo shareInstance].userImage = dic[@"headimgurl"];
+        [UserInfo saveUserName];
         if (dic[@"openid"]) {
             
             [self loginPrizeClaw];
@@ -156,6 +185,7 @@
 {
     [CH_NetWorkManager postWithURLString:@"Login/login" parameters:@{@"name":[UserInfo shareInstance].userName,@"pic":[UserInfo shareInstance].userImage,@"open_id":[UserInfo shareInstance].openID,@"push_id":@"111"} success:^(NSDictionary *data,NSInteger code) {
         if (code == 200) {
+            [UserInfo shareInstance].isLogined = YES;
             [UserInfo shareInstance].userToken = [data objectForKey:@"data"];
             if (self.navigationController) {
                 HomeViewController *vc = [HomeViewController new];
@@ -188,18 +218,7 @@
     [self presentViewController:alert animated:YES completion:nil];
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.navigationController.navigationBarHidden = YES;
-    [self.view addSubview:self.BackImg];
-    [self.view addSubview:self.ClawImg];
-    [self.view addSubview:self.HDImg];
-    [self.view addSubview:self.WXbtn];
-    
-    
-    
-    [self adpa];
-}
+
 
 
 

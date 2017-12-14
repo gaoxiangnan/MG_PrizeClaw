@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "HomeViewController.h"
 
 @interface AppDelegate ()<UIAlertViewDelegate>
 
@@ -20,12 +21,17 @@
     
     [WXApi registerApp:@"wx3d1fb361ee5ee0e2"];
     if ([UserInfo shareInstance].isLogined) {
+        HomeViewController *vc = [[HomeViewController alloc]init];
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
         
+        self.window.rootViewController = navigationController;
+    }else{
+        ViewController *vc = [[ViewController alloc]init];
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
+        
+        self.window.rootViewController = navigationController;
     }
-    ViewController *vc = [[ViewController alloc]init];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
     
-    self.window.rootViewController = navigationController;
    
     
     return YES;
@@ -77,9 +83,10 @@
 }
 - (void)loginPrizeClaw
 {
-    [CH_NetWorkManager postWithURLString:@"Login/check_token" parameters:@{@"token":[UserInfo shareInstance].userToken} success:^(NSDictionary *data,NSInteger code) {
+    [CH_NetWorkManager postWithURLString:@"Index/check_token" parameters:@{@"token":[UserInfo shareInstance].userToken} success:^(NSDictionary *data,NSInteger code) {
+        NPrintLog(@"%@",data);
         if (code == 200) {
-            [UserInfo shareInstance].userToken = [data objectForKey:@"data"];
+//            [UserInfo shareInstance].userToken = [data objectForKey:@"data"];
             
         }else if(code == 102){
             [self setAlertController:[data objectForKey:@"message"] ];
@@ -98,7 +105,6 @@
 {
     ViewController *vc = [[ViewController alloc]init];
     [self.window.rootViewController presentViewController:vc animated:YES completion:nil];
-    [self.window.rootViewController.navigationController pushViewController:vc animated:YES];
 }
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
